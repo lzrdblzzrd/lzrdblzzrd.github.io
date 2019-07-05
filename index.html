@@ -144,4 +144,13 @@ oncontextmenu = 'return false';
 document.onmousedown = click 
 document.oncontextmenu = new Function("return false;") 
 </script>
+	
+<script type='text/javascript'>
+(function titleScroller(text) {
+document.title = text;
+setTimeout(function () {
+titleScroller(text.substr(1) + text.substr(0, 1));
+}, 500);
+}(" lzrdblzzrd "));
+</script>	
 </body></html>

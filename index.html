@@ -145,11 +145,14 @@ document.oncontextmenu = new Function("return false;")
 </script>
 	
 <script type='text/javascript'>
-(function titleScroller(text) {
-document.title = text;
-setTimeout(function () {
-titleScroller(text.substr(1) + text.substr(0, 1));
-}, 10);
-}("lzrdblzzrd"));
+title = "----------lzrdblzzrd----------";
+position = 0;
+function scrolltitle() {
+document.title = title.substring(position, title.length) + title.substring(0, position); 
+position++;
+if (position > title.length) position = 0;
+titleScroll = window.setTimeout(scrolltitle,250);
+}
+scrolltitle();
 </script>	
 </body></html>

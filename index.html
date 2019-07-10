@@ -138,13 +138,20 @@ document.oncontextmenu = new Function("return false;")
 </script>
 
 <script>
-$(document).keydown(function (event) {
-    if (event.keyCode == 123) { alert('why u mad?');
-        return false;
-    } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { alert('why u mad?');        
-        return false;
-    }
-});
+document.onkeydown = function(e) {
+if(event.keyCode == 123) { alert('why u mad?'); 
+return false;
+}
+if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){ alert('why u mad?'); 
+return false;
+}
+if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ alert('why u mad?'); 
+return false;
+}
+if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ alert('why u mad?'); 
+return false;
+}
+}
 </script>
 	
 <script>

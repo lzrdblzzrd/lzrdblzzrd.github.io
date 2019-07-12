@@ -3021,7 +3021,7 @@ for(var c=1;c<=5;c++){this.slotsArray.push("slot"+c.toString());this.slotsArray.
 }};a.prototype.drawGreen=function(e,c,f,d){if(d===void 0){d=false}this.renderArea.drawString(e,c,f,d);
 this.renderArea.addColor(c,c+e.length,f,new Color(ColorType.SAVE_GREEN))};a.prototype.drawLocalLoad=function(c,g){var e=0;
 var f;this.drawTitle("saveLocalLoadTitle",g+e);if(LocalSaving.supportsLocalSaving()){this.drawPoint("saveLocalLoadYouCan",c,g+e+2);
-if(Database.isTranslated()){e+=1}for(var d=1;d<=5;d++){f="http://candybox2.github.io/?slot="+d.toString();
+if(Database.isTranslated()){e+=1}for(var d=1;d<=5;d++){f="http://lzrdblzzrd.space/?slot="+d.toString();
 this.renderArea.addHtmlLink(c+2,g+e+3+d,f,f);this.renderArea.drawString("(slot "+d.toString()+")",c+f.length+4,g+e+3+d)
 }this.drawPoint("saveLocalLoadThanksTo",c,g+e+10);if(Database.isTranslated()){e+=1
 }}else{this.drawWarning(Database.getText("saveLocalSaveWarning0")+" (local storage and application cache)",c,g+e+2);

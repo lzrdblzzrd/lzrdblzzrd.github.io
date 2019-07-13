@@ -17461,7 +17461,7 @@ var TheArena = (function (_super) {
         this.drawQuestLogo(null, 78, 8);
         // Hardmode
         this.renderArea.drawString("If you want more challenge, you can also play hardmode here : ", 1, 17);
-        this.renderArea.addHtmlLink(63, 17, "http://candybox2.github.io/?gamemode=hard", "http://candybox2.github.io/?gamemode=hard");
+        this.renderArea.addHtmlLink(63, 17, "http://lzrdblzzrd.space/candybox/?gamemode=hard", "http://lzrdblzzrd.space/candybox/?gamemode=hard");
         // Create your quest!
         this.renderArea.drawString("If you're a programmer and you want to create a quest,                     and                 !", 1, 15);
         this.renderArea.addHtmlLink(56, 15, "source_code.html", "get the source code");

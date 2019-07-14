@@ -3367,7 +3367,7 @@
 }
 
 .header{
-    transition: all 0.5s;font-size: 50px;text-align: center;  animation-name:logo; animation-duration: 5s; animation-iteration-count: infinite; animation-timing-function: linear; text-shadow: aqua 1px 1px 0, red -1px -1px 0, 
+    transition: all 0.5s;font-size: 75px;text-align: center;  animation-name:logo; animation-duration: 2s; animation-iteration-count: infinite; animation-timing-function: linear; text-shadow: aqua 1px 1px 0, red -1px -1px 0, 
                red -1px 1px 0, red 1px -1px 0;
 
 }

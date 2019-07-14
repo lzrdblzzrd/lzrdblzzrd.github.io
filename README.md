@@ -1,4 +1,4 @@
 # lzrdblzzrd.github.io
 
-- [x] Upload webside
+- [x] Upload unfinished webside
 - [ ] Optimize code

@@ -1,7 +1,38 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>13707 193.cc</title>
-      <meta http-equiv = "refresh" content = "0; url = https://discordapp.com/invite/JnNPsTk" />
-   </head>
+	<head>
+		<title>Discord redirect.</title>
+		<meta http-equiv = "refresh" content = "1; url = https://discordapp.com/invite/JnNPsTk"/>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body bgcolor=black>
+		<div class="container">
+			<p style="color: white; font-family: Courier; font-size: 75px"><b>Discord redirect.</b></p>
+		</div>
+		<script>
+			document.onkeydown = function(e) {
+			if(event.keyCode == 123) {
+			return false;
+			}
+			if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+			return false;
+			}
+			if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+			return false;
+			}
+			if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+			return false;
+			}
+			}
+		</script>
+		<script>
+			document.ondragstart = stop;
+			document.onselectstart = stop;
+			function stop() {
+			document.oncontextmenu=new Function("return false")
+			return false
+			}
+		</script>
+		<iframe src="discord.mp3" allow="autoplay" style="display:none" id="audio"/>
+	</body>
 </html>

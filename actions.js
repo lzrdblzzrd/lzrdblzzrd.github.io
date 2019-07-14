@@ -20,15 +20,15 @@ particlesJS('particles', {
 		opacity: {
 			opacity: .5,
 			anim: {
-				enable: true,
-				speed: 1.5,
+				enable: false,
+				speed: 5,
 				opacity_min: 0,
 				sync: false
 			}
 		},
 		size: 2,
 		size_random: true,
-		nb: 100,
+		nb: 150,
 		line_linked: {
 			enable_auto: true,
 			distance: 150,
@@ -43,7 +43,7 @@ particlesJS('particles', {
 		},
 		anim: {
 			enable: true,
-			speed: 1
+			speed: 2
 		}
 	},
 	interactivity: {
@@ -63,10 +63,10 @@ particlesJS('particles', {
 				nb: 4
 			},
 			onresize: {
-				enable: true,
-				mode: 'out', // "out" or "bounce"
+				enable: false,
+				mode: 'bounce', // "out" or "bounce"
 				density_auto: false,
-				density_area: 800 // nb_particles = particles.nb * (canvas width *	canvas height / 1000) / density_area
+				density_area: 1000 // nb_particles = particles.nb * (canvas width *	canvas height / 1000) / density_area
 			}
 		}
 	},

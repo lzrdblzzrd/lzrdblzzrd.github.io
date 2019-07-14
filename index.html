@@ -40,7 +40,7 @@
 			</section>
 			<section class="heading">
 				<div class="nick">
-					<h1 class="header">lzrdblzzrd</h1>
+					<h1 class="animated fadeInDown">lzrdblzzrd</h1>
 				</div>
 				<a class="nick"><h3 class="animated fadeInDown">be legit</h3></a>
 				<br>
@@ -77,14 +77,10 @@
 			}
 		</script>
 		<script>
-			document.ondragstart = test;
-			//запрет на перетаскивание 
-			document.onselectstart = test;
-			//запрет на выделение элементов страницы
-			document.oncontextmenu = test;
-			//запрет на выведение контекстного меню
-			function test() {
-			document.oncontextmenu=new Function("alert(message);return false")
+			document.ondragstart = stop;
+			document.onselectstart = stop;
+			function stop() {
+			document.oncontextmenu=new Function("return false")
 			return false
 			}
 		</script>

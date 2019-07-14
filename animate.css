@@ -3334,7 +3334,77 @@
   }
 }
 
+@keyframes logo{
+    0%{
+    color:red;    
+    }
+    15%{
+    color:orange ;  
+    }
+    30%{
+    color:yellow;    
+    }
+    45%{
+    color:lime;    
+    }
+    60%{
+    color:deepskyblue;    
+    }
+    75%{
+    color:blue;    
+    }
+    90%{
+    color:mediumvioletred;    
+    }
+    100%{
+    color:red;    
+    }
+}
+
+@keyframes Skeet {
+     0%{
+     background: linear-gradient(270deg, #0091ff, #0020ff, #8a04a4, #da06cc, #ff0095, #cfa303, #ffdf00);
+     }
+     15%{
+     background: linear-gradient(270deg, #0020ff, #8a04a4, #da06cc, #ff0095, #cfa303, #ffdf00, #0091ff);
+     }
+     30%{
+     background: linear-gradient(270deg, #8a04a4, #da06cc, #ff0095, #cfa303, #ffdf00, #0091ff, #0020ff);
+     }
+     45%{
+     background: linear-gradient(270deg, #da06cc, #ff0095, #cfa303, #ffdf00,#0091ff, #0020ff, #8a04a4);
+     }
+     50%{
+     background: linear-gradient(270deg, #ff0095, #cfa303, #ffdf00, #0091ff, #0020ff, #8a04a4, #da06cc);
+     }
+     75%{
+     background: linear-gradient(270deg, #cfa303, #ffdf00, #0091ff, #0020ff, #8a04a4, #da06cc, #ff0095);
+     }
+     100%
+     {
+     background: linear-gradient(270deg, #ffdf00, #0091ff, #0020ff, #8a04a4, #da06cc, #ff0095, #cfa303);  
+     }
+}
+
 .slideOutUp {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
+}
+
+.skeet{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+    background: linear-gradient(270deg, #0091ff, #0020ff, #8a04a4, #da06cc, #ff0095, #cfa303, #ffdf00);
+    animation-name:Skeet; 
+    animation-duration: 0.4s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: linear;
+    height: 6px;
+}
+
+.header{
+    transition: all 0.5s;font-size: 65px;text-align: center;  animation-name:logo; animation-duration: 5s; animation-iteration-count: infinite; animation-timing-function: linear; text-shadow: aqua 1px 1px 0, red -1px -1px 0, 
+               red -1px 1px 0, red 1px -1px 0;
+
 }

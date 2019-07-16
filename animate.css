@@ -3367,7 +3367,8 @@
 }
 
 .nick{
-	margin-top: 20px;
+	margin-top: 30px;
+	font-size: 25px;
 }
 
 .header{
@@ -3379,6 +3380,6 @@
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    text-shadow: aqua 1px 1px 0, red -1px -1px 0, red -1px 1px 0, red 1px -1px 0;
+    text-shadow: 1px 1px 0px rgba(8,230,255,100), -1px -1px 0px rgba(255,0,0,100);;
 
 }

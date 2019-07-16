@@ -3383,3 +3383,47 @@
     text-shadow: 1px 1px 0px rgba(8,230,255,100), -1px -1px 0px rgba(255,0,0,100);;
 
 }
+
+a:hover{
+	-webkit-animation-name:cool;
+	animation-name:cool;
+	-webkit-animation-duration:1.5s;
+	animation-duration:1.5s;
+	-webkit-animation-iteration-count:infinite;
+	animation-iteration-count:infinite
+}
+
+.cool{
+	-webkit-animation-name:cool;
+	animation-name:cool;
+	-webkit-animation-duration:2s;
+	animation-duration:2s;
+	-webkit-animation-iteration-count:infinite;
+	animation-iteration-count:infinite
+}
+
+@-webkit-keyframes cool{
+	0%,
+	100%{
+		color:#a24bcf
+	}
+	33%{
+		color:#4b79cf
+	}
+	66%{
+		color:#4bc5cf
+	}
+}
+
+@keyframes cool{
+	0%,
+	100%{
+		color:#a24bcf
+	}
+	33%{
+		color:#4b79cf
+	}
+	66%{
+		color:#4bc5cf
+	}
+}

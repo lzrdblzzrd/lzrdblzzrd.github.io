@@ -3334,7 +3334,7 @@
   }
 }
 
-@keyframes logo{
+@keyframes rainbow{
     0%{
     color:red;    
     }
@@ -3373,10 +3373,10 @@
 
 .header{
     transition: all 0.5s;
-    font-size: 75px;
+    font-size: 80px;
     text-align: center;
 	margin-top: 10px;
-    animation-name:logo;
+    animation-name: rainbow;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;

@@ -2,12 +2,33 @@
 <html>
 	<head>
 		<title>Discord redirect.</title>
-		<meta http-equiv = "refresh" content = "1; url = https://discordapp.com/invite/JnNPsTk"/>
+		<meta http-equiv = "refresh" content = "5; url = https://discordapp.com/invite/JnNPsTk"/>
 		<link rel="stylesheet" href="main.css">
+		<script type="text/javascript">
+			function startTimer(duration, display) {
+				var timer = duration, minutes, seconds;
+				setInterval(function () {
+					minutes = parseInt(timer / 60, 10);
+					seconds = parseInt(timer % 60, 10);
+					minutes = minutes < 10 ? + minutes : minutes;
+					seconds = seconds < 10 ? + seconds : seconds;
+					display.textContent = seconds;
+					if (--timer < 0) {
+						timer = duration;
+					}
+				}, 1000);
+			}
+			window.onload = function () {
+				var fiveSeconds = 4,
+				display = document.querySelector('#time');
+				startTimer(fiveSeconds, display);
+			};
+		</script>
 	</head>
-	<body bgcolor=black>
-		<div class="container">
-			<p style="color: white; font-family: Courier; font-size: 75px"><b>Discord redirect.</b></p>
+	<body bgcolor="black">
+		<div class="text">
+			<p style="font-family: Courier; font-size: 90px"><b>Discord redirect.</b></p>
+			<b><span id="time" class="timer">5</span></b>
 		</div>
 		<script>
 			document.onkeydown = function(e) {
@@ -33,6 +54,6 @@
 			return false
 			}
 		</script>
-		<iframe src="discord.mp3" allow="autoplay" style="display:none" id="audio"/>
+		<script src="jquery.min.js"></script>
 	</body>
 </html>

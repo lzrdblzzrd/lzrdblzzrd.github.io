@@ -3335,30 +3335,30 @@
 }
 
 @keyframes rainbow{
-    0%{
-    color:red;    
-    }
-    14%{
-    color:orange ;  
-    }
-    28%{
-    color:yellow;    
-    }
-    42%{
-    color:lime;    
-    }
-    57%{
-    color:deepskyblue;    
-    }
-    72%{
-    color:blue;    
-    }
-    86%{
-    color:mediumvioletred;    
-    }
-    100%{
-    color:red;    
-    }
+	0%{
+		color: #ff0000
+	}
+	14%{
+		color: #ffa500
+	}
+	28%{
+		color: #ffff00
+	}
+	42%{
+		color: #008000
+	}
+	57%{
+		color: #00ffff
+	}
+	72%{
+		color: #0000ff
+	}
+	86%{
+		color: #800080
+	}
+	100%{
+		color: #ff0000
+	}
 }
 
 .slideOutUp {

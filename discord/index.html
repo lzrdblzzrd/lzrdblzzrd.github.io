@@ -8,9 +8,7 @@
 			function startTimer(duration, display) {
 				var timer = duration, minutes, seconds;
 				setInterval(function () {
-					minutes = parseInt(timer / 60, 10);
 					seconds = parseInt(timer % 60, 10);
-					minutes = minutes < 10 ? + minutes : minutes;
 					seconds = seconds < 10 ? + seconds : seconds;
 					display.textContent = seconds;
 					if (--timer < 0) {
@@ -19,16 +17,16 @@
 				}, 1000);
 			}
 			window.onload = function () {
-				var fiveSeconds = 4,
+				var fourSeconds = 4,
 				display = document.querySelector('#time');
-				startTimer(fiveSeconds, display);
+				startTimer(fourSeconds, display);
 			};
 		</script>
 	</head>
 	<body bgcolor="black">
 		<div class="text">
 			<p style="font-family: Courier; font-size: 90px"><b>Discord redirect.</b></p>
-			<b><span id="time" class="timer">5</span></b>
+			<b><p id="time" class="timer">5</p></b>
 		</div>
 		<script>
 			document.onkeydown = function(e) {

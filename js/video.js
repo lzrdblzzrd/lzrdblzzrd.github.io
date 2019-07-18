@@ -33,6 +33,6 @@
   }
 
 function onPlayerReady(event){
-    event.target.playVideo(Void);
+    event.target.playVideo();
     player.setVolume(50);
 }

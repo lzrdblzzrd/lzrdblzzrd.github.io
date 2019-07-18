@@ -54,7 +54,7 @@
 
 .text {
 	position: absolute;
-	top: 40%;
+	top: 35%;
 	left: 50%;
 	-moz-transform: translateX(-50%) translateY(-50%);
 	-webkit-transform: translateX(-50%) translateY(-50%);

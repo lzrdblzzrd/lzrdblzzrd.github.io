@@ -3628,3 +3628,67 @@
     animation-iteration-count: 1 !important;
   }
 }
+
+@keyframes rainbow{
+	0%{
+		color: #ff0000
+	}
+	14%{
+		color: #ffa500
+	}
+	28%{
+		color: #ffff00
+	}
+	42%{
+		color: #008000
+	}
+	57%{
+		color: #00ffff
+	}
+	72%{
+		color: #0000ff
+	}
+	86%{
+		color: #800080
+	}
+	100%{
+		color: #ff0000
+	}
+}
+
+@-webkit-keyframes rainbow{
+	0%{
+		color: #ff0000
+	}
+	14%{
+		color: #ffa500
+	}
+	28%{
+		color: #ffff00
+	}
+	42%{
+		color: #008000
+	}
+	57%{
+		color: #00ffff
+	}
+	72%{
+		color: #0000ff
+	}
+	86%{
+		color: #800080
+	}
+	100%{
+		color: #ff0000
+	}
+}
+
+a:hover{
+	-webkit-animation-name: rainbow;
+	animation-name: rainbow;
+	-webkit-animation-duration: 3s;
+	animation-duration: 3s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	text-shadow: 1px 1px 0px rgba(8,230,255,100), -1px -1px 0px rgba(255,0,0,100);
+}

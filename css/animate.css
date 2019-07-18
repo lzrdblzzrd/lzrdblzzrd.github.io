@@ -3631,55 +3631,62 @@
 
 @keyframes rainbow{
 	0%{
+		color: #ffffff
+	}
+	12.5%{
 		color: #ff0000
 	}
-	14%{
+	25%{
 		color: #ffa500
 	}
-	28%{
+	37.5%{
 		color: #ffff00
 	}
-	42%{
+	50%{
 		color: #008000
 	}
-	57%{
+	62.5%{
 		color: #00ffff
 	}
-	72%{
+	75%{
 		color: #0000ff
 	}
-	86%{
+	87.5%{
 		color: #800080
 	}
 	100%{
-		color: #ff0000
+		color: #ffffff
 	}
 }
 
 @-webkit-keyframes rainbow{
+	
 	0%{
+		color: #ffffff
+	}
+	12.5%{
 		color: #ff0000
 	}
-	14%{
+	25%{
 		color: #ffa500
 	}
-	28%{
+	37.5%{
 		color: #ffff00
 	}
-	42%{
+	50%{
 		color: #008000
 	}
-	57%{
+	62.5%{
 		color: #00ffff
 	}
-	72%{
+	75%{
 		color: #0000ff
 	}
-	86%{
+	87.5%{
 		color: #800080
 	}
 	100%{
-		color: #ff0000
+		color: #ffffff
 	}
 }
 

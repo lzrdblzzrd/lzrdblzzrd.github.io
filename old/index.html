@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv = "refresh" content = "174; url = https://lzrdblzzrd.space/" />
+		<script language="javascript" type="text/javascript" src="main.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="animate.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900,300" rel="stylesheet" type="text/css">
+		<iframe src="music.mp3" allow="autoplay" style="display:none" id="audio"></iframe>
+	</head>
+	<body>
+		<span class="error"></span>
+		<span class="info"></span>
+		<div class="animated container fadeInDown">
+			<div class="logo">
+				<img src="" class="click">
+			</div>
+			<section class="social">
+				<ul>
+					<li class="animated fadeInDown">
+						<a title="steam" href="https://steamcommunity.com/id/lzrdblzzrd/" target="_blank">
+							<i class="fa fa-steam"></i>
+						</a>
+					</li>
+					<li class="animated fadeInDown">
+						<a title="soundcloud" href="https://soundcloud.com/lzrdblzzrd/" target="_blank">
+							<i class="fa fa-soundcloud"></i>
+						</a>
+					</li>
+					<li class="animated fadeInDown">
+						<a title= "telegram" href="https://t.me/lzrdblzzrd/" target="_blank">
+							<i class="fa fa-telegram"></i>
+						</a>
+					</li>
+				</ul>
+			</section>
+			<section class="heading">
+				<div class="nick">
+					<h1 class="header">lzrdblzzrd</h1>
+				</div>
+				<a class="nick"><h3 class="nick">13707 193.cc</h3></a>
+				<br>
+			</section>
+		</div>
+		<div id="particles"><canvas style="width: 100%; height: 100%;"></canvas></div>
+		<script src="particles.min.js"></script>
+		<script src="jquery.min.js"></script>
+		<script type="text/javascript" src="actions.js"></script>
+		<style>body, a:link{cursor:url(cursor.cur), default;} a:hover {cursor:url(cursor2.cur),pointer;}</style>
+		<script>
+			function click() {
+			if (event.button == 2 || event.button == 3) {alert('why u mad?');
+			oncontextmenu = 'return false';
+			}
+			}
+			document.onmousedown = click
+			document.oncontextmenu = new Function("return false;")
+		</script>
+		<script>
+			document.onkeydown = function(e) {
+			if(event.keyCode == 123) { alert('why u mad?');
+			return false;
+			}
+			if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){ alert('why u mad?');
+			return false;
+			}
+			if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ alert('why u mad?');
+			return false;
+			}
+			if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ alert('why u mad?');
+			return false;
+			}
+			}
+		</script>
+		<script>
+			document.ondragstart = stop;
+			document.onselectstart = stop;
+			function stop() {
+			document.oncontextmenu=new Function("return false")
+			return false
+			}
+		</script>
+		<script type='text/javascript'>
+			title = "----------lzrdblzzrd----------";
+			position = 0;
+			function scrolltitle() {
+			document.title = title.substring(position, title.length) + title.substring(0, position);
+			position++;
+			if (position > title.length) position = 0;
+			titleScroll = window.setTimeout(scrolltitle,250);
+			}
+			scrolltitle();
+		</script>
+	</body>
+</html>

@@ -25,6 +25,7 @@
           iv_load_policy: 3,
           theme: 'light',
           rel: 0
+          origin: http://lzrdblzzrd.space/
         },
         events: {
             'onReady': onPlayerReady,

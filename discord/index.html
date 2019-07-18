@@ -12,20 +12,23 @@
 					seconds = seconds < 10 ? + seconds : seconds;
 					display.textContent = seconds;
 					if (--timer < 0) {
-						timer = duration;
+						timer = NaN;
 					}
 				}, 1000);
 			}
 			window.onload = function () {
-				var fourSeconds = 4,
+				var fiveSeconds = 4,
 				display = document.querySelector('#time');
-				startTimer(fourSeconds, display);
+				startTimer(fiveSeconds, display);
 			};
 		</script>
 	</head>
 	<body bgcolor="black">
+		<div id="particles-js"></div>
+		<script src="particles.min.js"></script>
+		<script src="app.js"></script>
 		<div class="text">
-			<p style="font-family: Courier; font-size: 90px"><b>Discord redirect.</b></p>
+			<p style="font-family: Courier; font-variant: small-caps; font-size: 90px"><b>DISCORD REDIRECT.</b></p>
 			<b><p id="time" class="timer">5</p></b>
 		</div>
 		<script>
@@ -52,6 +55,5 @@
 			return false
 			}
 		</script>
-		<script src="jquery.min.js"></script>
 	</body>
 </html>

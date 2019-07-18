@@ -1,7 +1,3 @@
-  // credits to euroster :3
-
-  // song currently is ecco2k - hold me down like gravity
-  
   var tag = document.createElement('script');
   tag.src = "https://www.youtube.com/player_api";
   var firstScriptTag = document.getElementsByTagName('script')[0];

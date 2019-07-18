@@ -9,7 +9,6 @@
 				var timer = duration, minutes, seconds;
 				setInterval(function () {
 					seconds = parseInt(timer % 60, 10);
-					seconds = seconds < 10 ? + seconds : seconds;
 					display.textContent = seconds;
 					if (--timer < 0) {
 						timer = 0;
@@ -28,7 +27,7 @@
 		<script src="particles.min.js"></script>
 		<script src="app.js"></script>
 		<div class="text">
-			<p style="font-family: Courier; font-variant: small-caps; font-size: 90px"><b>DISCORD REDIRECT.</b></p>
+			<p style="font-family: Colonna MT; font-size: 100px"><b>DISCORD REDIRECT.</b></p>
 			<b><p id="time" class="timer">5</p></b>
 		</div>
 		<script>

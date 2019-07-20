@@ -3690,12 +3690,25 @@
 	}
 }
 
-a:hover{
+.link{
+	text-decoration: none;
+	font-size: 10px;
+	transition: all 0.3s;
+	margin-right: 10px;
+	margin-left: 10px
+}
+
+.link:hover{
 	-webkit-animation-name: rainbow;
 	animation-name: rainbow;
 	-webkit-animation-duration: 3s;
 	animation-duration: 3s;
 	-webkit-animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
+	font-size: 12px;
 	text-shadow: 1px 1px 0px rgba(0,255,255,100), -1px -1px 0px rgba(255,0,0,100)
+}
+
+.socials{
+	margin-top: 10px;
 }

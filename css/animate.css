@@ -3629,67 +3629,6 @@
   }
 }
 
-@keyframes rainbow{
-	0%{
-		color: #ffffff
-	}
-	12.5%{
-		color: #ff0000
-	}
-	25%{
-		color: #ffa500
-	}
-	37.5%{
-		color: #ffff00
-	}
-	50%{
-		color: #008000
-	}
-	62.5%{
-		color: #00ffff
-	}
-	75%{
-		color: #0000ff
-	}
-	87.5%{
-		color: #800080
-	}
-	100%{
-		color: #ffffff
-	}
-}
-
-@-webkit-keyframes rainbow{
-	
-	0%{
-		color: #ffffff
-	}
-	12.5%{
-		color: #ff0000
-	}
-	25%{
-		color: #ffa500
-	}
-	37.5%{
-		color: #ffff00
-	}
-	50%{
-		color: #008000
-	}
-	62.5%{
-		color: #00ffff
-	}
-	75%{
-		color: #0000ff
-	}
-	87.5%{
-		color: #800080
-	}
-	100%{
-		color: #ffffff
-	}
-}
-
 .link{
 	text-decoration: none;
 	font-size: 10px;

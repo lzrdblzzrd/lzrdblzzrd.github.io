@@ -73,6 +73,7 @@ a {
 
 .link{
 	text-decoration: none;
+	color: LightBlue;
 	font-size: 10px;
 	transition: all 0.5s;
 	margin-right: 10px;

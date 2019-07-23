@@ -1578,11 +1578,6 @@
 
 @-webkit-keyframes fadeInUp {
   from {
-    transform: translate(-50%, -50%);    
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
     opacity: 0;
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
@@ -3627,21 +3622,4 @@
     -webkit-animation-iteration-count: 1 !important;
     animation-iteration-count: 1 !important;
   }
-}
-
-.link{
-	text-decoration: none;
-	font-size: 10px;
-	transition: all 0.5s;
-	margin-right: 10px;
-	margin-left: 10px
-}
-
-.link:hover{
-	color: DodgerBlue;
-	font-size: 12px;
-}
-
-.socials{
-	margin-top: 10px;
 }

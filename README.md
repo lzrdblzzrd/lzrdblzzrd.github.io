@@ -1,2 +1,2 @@
 - [x] Upload unfinished website
-- [ ] Optimize code
+- [x] Optimize code

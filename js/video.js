@@ -8,15 +8,15 @@
     player = new YT.Player('ytplayer', {
         height: '1080',
         width: '1920',
-        videoId: 'ZP5o0yaMn7w',
+        videoId: 'fVYJjyeMimQ',
         playerVars: {
-          playlist: 'ZP5o0yaMn7w',
+          playlist: 'fVYJjyeMimQ',
           autoplay: 1,
           controls: 0,
           disablekb: 1,
           hl: 'ru-ru',
           hd: 1,
-          vq: 'hd720',
+          vq: 'hd1080',
           loop: 1,
           modestbranding: 1,
           showinfo: 0,

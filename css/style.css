@@ -74,7 +74,7 @@ a {
 .link{
 	text-decoration: none;
 	color: LightBlue;
-	font-size: 10px;
+	font-size: 8px;
 	transition: all 0.5s;
 	margin-right: 10px;
 	margin-left: 10px
@@ -82,7 +82,7 @@ a {
 
 .link:hover{
 	color: DodgerBlue;
-	font-size: 12px;
+	font-size: 10px;
 }
 
 .socials{

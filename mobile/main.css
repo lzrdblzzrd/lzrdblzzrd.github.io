@@ -86,11 +86,12 @@
 	animation-iteration-count: infinite;
 	-webkit-animation-iteration-count: infinite;
 	top: 0; right: 0; bottom: 0; left: 0;
-	border: 10px solid gray
+	border: 10px solid black;
 }
 
 body {
 	overflow: hidden;
+	padding: 0;
 }
 
 canvas {

@@ -76,13 +76,12 @@
 	}
 }
 
-.text {
-	position: absolute;
-	top: 50%;
+p {
+	top: 40%;
 	left: 50%;
-	-moz-transform: translateX(-50%) translateY(-50%);
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+	position: absolute;
 	animation-name: alertred;
 	-webkit-animation-name: alertred;
 	animation-duration: 2.5s;

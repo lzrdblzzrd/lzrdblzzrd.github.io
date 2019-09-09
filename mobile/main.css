@@ -56,6 +56,9 @@
 	0%{
 		color: red
 	}
+	25%{
+		color: white
+	}
 	50%{
 		color: white
 	}
@@ -67,6 +70,9 @@
 @-webkit-keyframes alertred{
 	0%{
 		color: red
+	}
+	25%{
+		color: white
 	}
 	50%{
 		color: white
@@ -86,7 +92,6 @@
 	animation-iteration-count: infinite;
 	-webkit-animation-iteration-count: infinite;
 	top: 0; right: 0; bottom: 0; left: 0;
-	border: 10px solid black;
 }
 
 body {

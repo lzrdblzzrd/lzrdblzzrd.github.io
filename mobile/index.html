@@ -3,6 +3,7 @@
 	<head>
 		<title>Mobile request denied!</title>
 		<link rel="stylesheet" href="main.css">
+		<link rel="icon" href="favicon.ico">
 	</head>
 	<body bgcolor="black">
 		<div id="particles-js"></div>
@@ -33,6 +34,12 @@
 			function stop() {
 			document.oncontextmenu=new Function("return false")
 			return false
+			}
+		</script>
+		<script>
+			var isMobile = /Win|Mac|X11|Linux/i.test(navigator.userAgent);
+			if (isMobile) {
+			  window.location = 'https://lzrdblzzrd.space/';
 			}
 		</script>
 	</body>

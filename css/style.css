@@ -103,15 +103,19 @@ a {
 
 .reload{
 	position: absolute;
+	color: LightBlue;
+	font-size: 8px;
+	transition: all 0.5s;
 	left: 20px;
 	top: 20px;
-	font-size: 8px;
-	animation-name: blinking;
-	-webkit-animation-name: blinking;
-	animation-duration: 2.5s;
-	-webkit-animation-duration: 2.5s;
-	animation-iteration-count: infinite;
-	-webkit-animation-iteration-count: infinite;
+}
+
+.reload:hover{
+	position: absolute;
+	color: DodgerBlue;
+	font-size: 10px;
+	left: 16px;
+	top: 16px;
 }
 
 .link{

@@ -71,6 +71,49 @@ a {
 	filter: drop-shadow(3px 3px 3px #000);
 }
 
+@keyframes blinking{
+	0%{
+		color: White
+	}
+	25%{
+		color: DodgerBlue
+	}
+	50%{
+		color: DodgerBlue
+	}
+	100%{
+		color: White
+	}
+}
+
+@-webkit-keyframes blinking{
+	0%{
+		color: White
+	}
+	25%{
+		color: DodgerBlue
+	}
+	50%{
+		color: DodgerBlue
+	}
+	100%{
+		color: White
+	}
+}
+
+.reload{
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	font-size: 8px;
+	animation-name: blinking;
+	-webkit-animation-name: blinking;
+	animation-duration: 2.5s;
+	-webkit-animation-duration: 2.5s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
 .link{
 	text-decoration: none;
 	color: LightBlue;

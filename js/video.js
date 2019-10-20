@@ -8,9 +8,9 @@
     player = new YT.Player('ytplayer', {
         height: '1080',
         width: '1920',
-        videoId: 'Eeg3Kz3wJys',
+        videoId: '08Ydny8ZAzE',
         playerVars: {
-          playlist: 'Eeg3Kz3wJys',
+          playlist: '08Ydny8ZAzE',
           autoplay: 1,
           controls: 0,
           disablekb: 1,

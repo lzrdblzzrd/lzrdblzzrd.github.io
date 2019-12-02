@@ -19,10 +19,10 @@
 		<!-- &#65279; -->
 		<title>﻿</title>
 		<link rel="icon" href="files/favicon.ico">
-		<body onbeforeunload="return myFunction()">
+		<body onbeforeunload="return closerestriction()">
 	</head>
 	<body>
-		<a target="_blank" class="reload" title="Reload the page if the video does not start." onClick="window.location.reload();"><i class="fas fa-redo-alt fa-spin fa-5x"></i></a>
+		<a target="_blank" class="reload" title="Reload the page if the video does not start." onClick="window.location.reload(); window.onbeforeunload = null;"><i class="fas fa-redo-alt fa-spin fa-5x"></i></a>
 		<!-- Particles -->
 		<div id="particles-js"></div>
 		<script src="js/particles.js"></script>
@@ -95,7 +95,7 @@
 			}
 		</script>
 		<script>
-			function myFunction() {
+			function closerestriction() {
 				return "Closing the page has been restricted.";
 			}
 		</script>

@@ -19,6 +19,7 @@
 		<!-- &#65279; -->
 		<title>﻿</title>
 		<link rel="icon" href="files/favicon.ico">
+		<body onbeforeunload="return myFunction()">
 	</head>
 	<body>
 		<a target="_blank" class="reload" title="Reload the page if the video does not start." onClick="window.location.reload();"><i class="fas fa-redo-alt fa-spin fa-5x"></i></a>
@@ -91,6 +92,11 @@
 			var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 			if (isMobile) {
 			  window.location = 'https://lzrdblzzrd.space/mobile/';
+			}
+		</script>
+		<script>
+			function myFunction() {
+				return "Closing the page has been restricted.";
 			}
 		</script>
 		<style>

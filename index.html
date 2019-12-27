@@ -26,7 +26,7 @@
 		<body onbeforeunload="return closerestriction()">
 	</head>
 	<body>
-		<a target="_blank" class="reload" id="reload" title="Reload the page if the video does not start."><i class="fas fa-redo-alt fa-spin fa-5x"></i></a>
+		<a target="_blank" class="reload" id="reload" title="Reload the page if the video does not start." style="visibility:hidden;"><i class="fas fa-redo-alt fa-spin fa-5x"></i></a>
 		<!-- Particles -->
 		
 		<div id="particles-js"></div>
@@ -112,6 +112,14 @@
 				window.location.reload();
 			}
 		</script>
+		<script>
+			setTimeout(function(){
+				document.getElementById('reload').style.visibility = "visible";
+			},2000);
+		</script>
+		
+		<!-- Styles -->
+		
 		<!-- Changes the cursor on the site. -->
 		<style>
 			body, a:link{cursor:url(cursors/normal.cur), default;}

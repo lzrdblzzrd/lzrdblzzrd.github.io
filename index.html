@@ -1,5 +1,6 @@
 <html>
 	<head>
+	
 		<!-- Meta Items -->
 		
 		<meta charset="utf-8">
@@ -27,6 +28,7 @@
 	</head>
 	<body>
 		<a target="_blank" class="reload" id="reload" title="Reload the page if the video does not start." style="visibility:hidden;"><i class="fas fa-redo-alt fa-spin fa-5x"></i></a>
+		
 		<!-- Particles -->
 		
 		<div id="particles-js"></div>
@@ -74,6 +76,7 @@
 			document.onselectstart = stop;
 			document.oncontextmenu = stop;
 		</script>
+		
 		<!-- Blocks hotkeys for viewing the page code (Yes, I know that this can be done through the top panel). -->
 		<script>
 			document.onkeydown = function(e) {
@@ -94,6 +97,7 @@
 			}
 			}
 		</script>
+		
 		<!-- Blocks the opening of the site from mobile devices. -->
 		<script>
 			var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -101,6 +105,7 @@
 			  window.location = 'https://lzrdblzzrd.space/mobile/';
 			}
 		</script>
+		
 		<!-- The update button does not call the onbeforeunload() function. -->
 		<script>
 			window.onbeforeunload = function(){        

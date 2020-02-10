@@ -34,5 +34,5 @@
 
 function onPlayerReady(event){
     event.target.playVideo();
-    player.setVolume(10);
+    window.player.setVolume(10);
 }

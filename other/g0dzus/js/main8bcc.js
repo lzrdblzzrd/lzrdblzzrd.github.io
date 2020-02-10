@@ -55,7 +55,7 @@ audio.volume = 1; //0.1
 
 function onPlayerReady(e) {
     $('iframe#youtube').attr("data-keepplaying", "");
-    window.player.setVolume(5);
+    window.player.setVolume(10);
     $(window).trigger("resize");
     
     audio.currentTime = 0;

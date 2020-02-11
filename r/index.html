@@ -2,22 +2,42 @@
 <html>
 	<head>
 		<title>&#65279;</title>
-		<meta http-equiv = "refresh" content = "3; url = https://lzrdblzzrd.space/"/>
+		<meta http-equiv = "refresh" content = "10; url = https://lzrdblzzrd.space/"/>
+		<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
 	</head>
 	<body bgcolor="black">
-		<div class="container">
-			<span>redirect placeholder. nothing more.</span>
+		<div class="centered rainbow" onclick="window.close();">
+			<span>redirect placeholder. nothing more. click to close.</span>
 		</div>
 		<style>
-			.container {
+			.centered {
 				color: white;
-				font-size: 20px;
+				font-size: 25px;
 				position: absolute;
 				top: 50%;
 				left: 50%;
 				-moz-transform: translateX(-50%) translateY(-50%);
 				-webkit-transform: translateX(-50%) translateY(-50%);
 				transform: translateX(-50%) translateY(-50%);
+			}
+			
+			.rainbow {
+				background: repeating-linear-gradient(to right, #FF0000, #FFA500, #FFFF00, #008000, #00FFFF, #0000FF, #EE82EE);
+				-webkit-background-clip: text;
+				background-clip: text;
+				color: transparent;
+				animation: rainbow_animation 5s infinite;
+				background-size: 1000% 100%;
+			}
+			
+			@keyframes rainbow_animation {
+				0%,100% {
+					background-position: 0 0;
+				}
+
+				50% {
+					background-position: 100% 0;
+				}
 			}
 		</style>
 		<script>

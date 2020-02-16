@@ -16,7 +16,7 @@
           disablekb: 1,
           hl: 'ru-ru',
           hd: 1,
-          vq: 'hd720',
+          vq: 'hd1080',
           loop: 1,
           modestbranding: 1,
           showinfo: 0,

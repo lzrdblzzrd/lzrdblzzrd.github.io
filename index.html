@@ -66,12 +66,12 @@
 		<!-- Blocks context menu and mouse drags. -->
 		<script>
 			function click() {
-			if (event.button == 2 || event.button == 3) {
-			oncontextmenu = 'return false';
-			}
+				if (event.button == 2 || event.button == 3) {
+					oncontextmenu = 'return false';
+				}
 			}
 			function stop() {
-			return false
+				return false
 			}
 			document.ondragstart = stop;
 			document.onselectstart = stop;
@@ -81,21 +81,21 @@
 		<!-- Blocks hotkeys for viewing the page code (Yes, I know that this can be done through the top panel). -->
 		<script>
 			document.onkeydown = function(e) {
-			if(event.keyCode == 123) {
-				return false;
-			}
-			if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
-				return false;
-			}
-			if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
-				return false;
-			}
-			if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
-				return false;
-			}
-			if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
-				return false;
-			}
+				if(event.keyCode == 123) {
+					return false;
+				}
+				if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+					return false;
+				}
+				if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+					return false;
+				}
+				if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
+					return false;
+				}
+				if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+					return false;
+				}
 			}
 		</script>
 		

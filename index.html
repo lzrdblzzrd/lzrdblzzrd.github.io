@@ -106,10 +106,6 @@
 		</script>
 
 		<script>
-			window.onbeforeunload = function(){        
-				return "Closing the page has been restricted.";        
-			}
-    
 			document.getElementById('reload').onclick=function(){
 				window.onbeforeunload = null;
 				window.location.reload();
@@ -127,3 +123,9 @@
 		</style>
 	</body>
 </html>
+
+<!--
+			window.onbeforeunload = function(){        
+				return "Closing the page has been restricted.";        
+			}
+-->

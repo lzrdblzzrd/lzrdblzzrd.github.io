@@ -1,0 +1,168 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<meta http-equiv="Expires" content="0"/>
+		
+		<script src="js/jquery.min.js"></script>
+		
+		<script src="js/jquery.mb.YTPlayer.js"></script>
+		<link href="css/jquery.mb.YTPlayer.min.css" rel="stylesheet" />
+		
+		<script src="js/fontawesome.min.js"></script>
+		<link rel="stylesheet" href="css/fontawesome.css"/>
+		
+		<link href="css/main.css" rel="stylesheet">
+		
+		<!-- &#8203; -->
+		<title>​</title>
+		<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+
+		<script type="text/javascript" >
+		   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+		   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+		   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+		   ym(61437637, "init", {
+				clickmap:true,
+				trackLinks:true,
+				accurateTrackBounce:true,
+				webvisor:true,
+				trackHash:true
+		   });
+		</script>
+		<noscript><div><img src="https://mc.yandex.ru/watch/61437637" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+	</head>
+	
+	<body onload="onBodyLoad()">
+		
+		<div class="rainbowline"></div>
+		
+		<div id="plugdiv">
+			<img id="loadinggif" src="img/loading.gif"/>
+			<img id="enterbutton" onclick="enter(this);" src="img/enter.png"/>
+		</div>
+		
+			<div class="moving">
+				<div id="bgndVideo" class="player" data-property="{videoURL:random, containment:'body', autoPlay:false, mute:false, loop:true, startAt:-1, opacity:1, showControls:false, showYTLogo:false, stopMovieOnBlur:false, vol:'25', ratio:'4/3', optimizeDisplay:true}"></div>
+				<div id="particles-js">
+						<script src="js/particles/particles.js"></script>
+						<script src="js/particles/app.js"></script>
+				</div>
+			</div>
+			
+			<div id="content">
+					
+			
+				
+				
+
+			
+				<div id="logo">
+					<img src="img/logo.png">
+				</div>
+				<div class="animated fadeInUp" id="links">
+					<div class="socials">
+						<a target="_blank" class="link" onclick="window.open('https://steamcommunity.com/id/lzrdblzzrd');"><i class="fab fa-steam-symbol fa-5x"></i></a>
+						<a target="_blank" class="link" onclick="window.open('https://soundcloud.com/lzrdblzzrd');"><i class="fab fa-soundcloud fa-5x"></i></a>
+						<a target="_blank" class="link" onclick="window.open('https://discord.gg/JnNPsTk');"><i class="fab fa-discord fa-5x"></i></a>
+						<a target="_blank" class="link" onclick="window.open('https://instagram.com/lzrdblzzrd');"><i class="fab fa-instagram fa-5x"></i></a>
+						<a target="_blank" class="link" onclick="window.open('https://t.me/lzrdblzzrd');"><i class="fab fa-telegram-plane fa-5x"></i></a>
+					</div>
+				</div>
+			</div>
+		
+		<script>
+			var videos = ["rM3bta9Gbpo", "LlyVM-YSmmc", "exPAnZFNrF8", "MLcd7mfyvT0"];
+			var random = videos[Math.floor(Math.random() * videos.length)];
+			
+			function enter(e) {
+				jQuery("#enterbutton").fadeTo(1000, 0);
+				jQuery("#plugdiv").fadeTo(1000, 0);
+				jQuery("#maincontent").show();
+				setTimeout(function() {
+					jQuery("#enterbutton").hide();
+					jQuery("#plugdiv").hide();
+					jQuery("#maincontent").fadeIn(1000, 1);
+				}, 1000);
+				
+				jQuery("#bgndVideo").YTPUnmute();
+				jQuery("#bgndVideo").YTPPlay();
+			}
+		</script>
+	
+		<script>
+			function onBodyLoad() {
+				jQuery("#bgndVideo").YTPlayer();
+				setTimeout(function() {
+					jQuery("#loadinggif").fadeTo(250, 0);
+					setTimeout(function() {
+						jQuery("#loadinggif").hide();
+					}, 250);
+					jQuery("#enterbutton").show();
+					jQuery("#enterbutton").fadeTo(250, 1);
+				}, 1500);
+			}
+		</script>
+		
+		<script>
+			function stop() {
+				return false
+			}
+			
+			document.ondragstart = stop;
+			document.onselectstart = stop;
+			document.oncontextmenu = stop;
+			
+			document.onkeydown = function(e) {
+				if(event.keyCode == 123) { return stop() }
+				if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){ return stop() }
+				if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ return stop() }
+				if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){ return stop() }
+				if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ return stop() }
+			}
+		</script>
+		
+		<script>
+			var lFollowX = 0,
+				lFollowY = 0,
+				x = 0,
+				y = 0,
+				friction = 1 / 50;
+
+			function moveBackground() {
+			  x += (lFollowX - x) * friction;
+			  y += (lFollowY - y) * friction;
+			  
+			  translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+			  $('#moving').css({
+				'-webit-transform': translate,
+				'-moz-transform': translate,
+				'transform': translate
+			  });
+
+			  window.requestAnimationFrame(moveBackground);
+			}
+
+			$(window).on('mousemove', function(e) {
+
+			  var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+			  var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+			  lFollowX = (20 * lMouseX) / -100; // 100 : 12 = lMouxeX : lFollow
+			  lFollowY = (10 * lMouseY) / -100;
+
+			});
+
+			moveBackground();
+		</script>
+		
+		<style>
+			body, a:link{cursor:url(cursors/normal.cur), default;}
+			a:hover {cursor:url(cursors/hover.cur),pointer;}
+		</style>
+	</body>
+</html>

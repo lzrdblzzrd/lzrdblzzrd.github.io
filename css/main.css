@@ -1,0 +1,166 @@
+html {
+	background-color: black;
+}
+
+body {
+	background-color: black;
+	margin: 0;
+	padding: 0;
+}
+
+.rainbowline { 
+	height: 0.3%;
+	width: 100%;
+	left:0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	position: absolute;
+	background: #1e5799;
+    background: -moz-linear-gradient(left, #1e5799 0%, #f300ff 50%, #e0ff00 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1e5799), color-stop(50%,#f300ff), color-stop(100%,#e0ff00));
+    background: -webkit-linear-gradient(left, #1e5799 0%,#f300ff 50%,#e0ff00 100%);
+    background: -o-linear-gradient(left, #1e5799 0%,#f300ff 50%,#e0ff00 100%);
+    background: -ms-linear-gradient(left, #1e5799 0%,#f300ff 50%,#e0ff00 100%);
+	background: linear-gradient(to right, #1e5799 0%,#f300ff 50%,#e0ff00 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#e0ff00',GradientType=1 );
+	background-size: 1800% 1800%;
+	-webkit-animation: rainbow 8s ease infinite;
+	-z-animation: rainbow 8s ease infinite;
+	-o-animation: rainbow 8s ease infinite;
+	animation: rainbow 8s ease infinite;
+}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+#plugdiv {
+	background: black;
+	opacity: 1;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+}
+
+#loadinggif {
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);    
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+}
+
+#enterbutton {
+	display: none;
+	opacity: 0;
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);    
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+}
+
+#particles-js {
+	pointer-events: none;
+}
+
+#content {
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);    
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+@keyframes blinking {
+	0%{
+		color: White
+	}
+	25%{
+		color: DodgerBlue
+	}
+	50%{
+		color: DodgerBlue
+	}
+	100%{
+		color: White
+	}
+}
+
+@-webkit-keyframes blinking {
+	0%{
+		color: White
+	}
+	25%{
+		color: DodgerBlue
+	}
+	50%{
+		color: DodgerBlue
+	}
+	100%{
+		color: White
+	}
+}
+
+.socials {
+	margin-top: 10px;
+}
+
+.link {
+	text-decoration: none;
+	color: LightBlue;
+	font-size: 8px;
+	transition: all 0.5s;
+	margin-right: 10px;
+	margin-left: 10px
+}
+
+.link:hover {
+	color: DodgerBlue;
+	font-size: 10px;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	-webkit-filter: drop-shadow(3px 3px 3px #000);
+	filter: drop-shadow(3px 3px 3px #000);
+}
+
+.YTPOverlay{
+	background: rgba(0, 0, 0, 0.1) url(../img/overlay.png);
+}

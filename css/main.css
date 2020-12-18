@@ -9,8 +9,9 @@ body {
 	padding: 0;
 }
 
-.rainbowline { 
-	height: 0.2%;
+.rainbowline {
+	z-index: 99;
+	height: 0.25%;
 	width: 100%;
 	position: absolute;
 	background: linear-gradient(124deg, #ff0000, #ff4000, #ff8000, #ffbf00, #ffff00, #bfff00, #80ff00, #40ff00, #00ff00, #00ff40, #00ff80, #00ffbf, #00ffff, #00bfff, #0080ff, #0040ff, #0000ff, #4000ff, #8000ff, #bf00ff, #ff00ff);

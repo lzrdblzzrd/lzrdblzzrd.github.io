@@ -37,8 +37,6 @@
 	</head>
 
 	<body onload="onBodyLoad()">
-		<div class="rainbowline" style="top: 0%"></div>
-		<div class="rainbowline" style="top: 99.8%"></div>
 		<div id="plugdiv">
 			<img id="loadinggif" src="img/loading.gif"/>
 			<img id="enterbutton" onclick="enter(this);" src="img/enter.png"/>
@@ -54,7 +52,7 @@
 			<div id="logo">
 				<img src="img/logo.png">
 			</div>
-			<div class="animated fadeInUp" id="links">
+			<div id="links">
 				<div class="socials">
 					<a target="_blank" class="link" onclick="window.open('https://steamcommunity.com/id/lzrdblzzrd');"><i class="fab fa-steam-symbol fa-5x"></i></a>
 					<a target="_blank" class="link" onclick="window.open('https://soundcloud.com/lzrdblzzrd');"><i class="fab fa-soundcloud fa-5x"></i></a>
@@ -64,6 +62,8 @@
 				</div>
 			</div>
 		</div>
+		<div class="rainbowline" style="top: 0%"></div>
+		<div class="rainbowline" style="bottom: 0%"></div>
 		<script>
 			function onBodyLoad() {
 				jQuery("#loadinggif").fadeTo(500, 1);
@@ -118,6 +118,37 @@
 			if (isMobile) {
 			  window.location = 'mobile/';
 			}
+		</script>
+		<script>
+			var lFollowX = 0,
+				lFollowY = 0,
+				x = 0,
+				y = 0,
+				friction = 1 / 50;
+
+			function moveBackground() {
+				x += (lFollowX - x) * friction;
+				y += (lFollowY - y) * friction;
+
+				translate = 'translate(' + x + 'px, ' + y + 'px)';
+
+				$('#logo, #links, #particles-js').css({
+					'-webit-transform': translate,
+					'-moz-transform': translate,
+					'transform': translate
+				});
+
+				window.requestAnimationFrame(moveBackground);
+			}
+
+			$(window).on('mousemove click', function(e) {
+				var lMouseX = Math.max(-50, Math.min(50, $(window).width() / 2 - e.clientX));
+				var lMouseY = Math.max(-50, Math.min(50, $(window).height() / 2 - e.clientY));
+				lFollowX = (12 * lMouseX) / -100; // 100 : 12 = lMouxeX : lFollow
+				lFollowY = (10 * lMouseY) / -100;
+			});
+
+			moveBackground();
 		</script>
 		<style>
 			body, a:link{cursor:url(cursors/normal.cur), default;}

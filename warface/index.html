@@ -27,27 +27,20 @@
 			}
 		</style>
 		<script>
-			document.onkeydown = function(e) {
-			if(event.keyCode == 123) {
-			return false;
+			function stop() {
+				return false
 			}
-			if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
-			return false;
-			}
-			if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
-			return false;
-			}
-			if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
-			return false;
-			}
-			}
-		</script>
-		<script>
+			
 			document.ondragstart = stop;
 			document.onselectstart = stop;
-			function stop() {
-			document.oncontextmenu=new Function("return false")
-			return false
+			document.oncontextmenu = stop;
+			
+			document.onkeydown = function(e) {
+				if(event.keyCode == 123) { return stop() }
+				if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){ return stop() }
+				if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ return stop() }
+				if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){ return stop() }
+				if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ return stop() }
 			}
 		</script>
 	</body>

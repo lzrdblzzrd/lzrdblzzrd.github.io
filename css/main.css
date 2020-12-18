@@ -9,26 +9,19 @@ body {
 }
 
 .rainbowline { 
-	height: 0.3%;
+	height: 0.2%;
 	width: 100%;
-	left:0;
-	right: 0;
-	top: 0;
-	bottom: 0;
 	position: absolute;
-	background: #1e5799;
-    background: -moz-linear-gradient(left, #1e5799 0%, #f300ff 50%, #e0ff00 100%);
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1e5799), color-stop(50%,#f300ff), color-stop(100%,#e0ff00));
-    background: -webkit-linear-gradient(left, #1e5799 0%,#f300ff 50%,#e0ff00 100%);
-    background: -o-linear-gradient(left, #1e5799 0%,#f300ff 50%,#e0ff00 100%);
-    background: -ms-linear-gradient(left, #1e5799 0%,#f300ff 50%,#e0ff00 100%);
-	background: linear-gradient(to right, #1e5799 0%,#f300ff 50%,#e0ff00 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#e0ff00',GradientType=1 );
-	background-size: 1800% 1800%;
-	-webkit-animation: rainbow 8s ease infinite;
-	-z-animation: rainbow 8s ease infinite;
-	-o-animation: rainbow 8s ease infinite;
-	animation: rainbow 8s ease infinite;
+	background: linear-gradient(124deg, #ff0000, #ff4000, #ff8000, #ffbf00, #ffff00, #bfff00, #80ff00, #40ff00, #00ff00, #00ff40, #00ff80, #00ffbf, #00ffff, #00bfff, #0080ff, #0040ff, #0000ff, #4000ff, #8000ff, #bf00ff, #ff00ff);
+	background: -webkit-linear-gradient(124deg, #ff0000, #ff4000, #ff8000, #ffbf00, #ffff00, #bfff00, #80ff00, #40ff00, #00ff00, #00ff40, #00ff80, #00ffbf, #00ffff, #00bfff, #0080ff, #0040ff, #0000ff, #4000ff, #8000ff, #bf00ff, #ff00ff);
+	background: -o-linear-gradient(124deg, #ff0000, #ff4000, #ff8000, #ffbf00, #ffff00, #bfff00, #80ff00, #40ff00, #00ff00, #00ff40, #00ff80, #00ffbf, #00ffff, #00bfff, #0080ff, #0040ff, #0000ff, #4000ff, #8000ff, #bf00ff, #ff00ff);
+	background: linear-gradient(124deg, #ff0000, #ff4000, #ff8000, #ffbf00, #ffff00, #bfff00, #80ff00, #40ff00, #00ff00, #00ff40, #00ff80, #00ffbf, #00ffff, #00bfff, #0080ff, #0040ff, #0000ff, #4000ff, #8000ff, #bf00ff, #ff00ff);
+	background-size: 1000% 100%;
+
+	-webkit-animation: rainbow 20s ease infinite;
+	-z-animation: rainbow 20s ease infinite;
+	-o-animation: rainbow 20s ease infinite;
+	animation: rainbow 20s ease infinite;
 }
 
 @-webkit-keyframes rainbow {
@@ -64,6 +57,7 @@ body {
 }
 
 #loadinggif {
+	opacity: 0;
 	margin: 0;
 	position: absolute;
 	left: 50%;

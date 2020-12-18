@@ -72,9 +72,9 @@
 					jQuery("#loadinggif").fadeTo(250, 0);
 					setTimeout(function() {
 						jQuery("#loadinggif").hide();
-					}, 250);
+					}, 500);
 					jQuery("#enterbutton").show();
-					jQuery("#enterbutton").fadeTo(250, 1);
+					jQuery("#enterbutton").fadeTo(500, 1);
 				}, 2000);
 			}
 		</script>
@@ -111,6 +111,12 @@
 				if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ return stop() }
 				if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){ return stop() }
 				if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ return stop() }
+			}
+		</script>
+		<script>
+			var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+			if (isMobile) {
+			  window.location = 'mobile/';
 			}
 		</script>
 		<style>

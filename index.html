@@ -54,11 +54,11 @@
 			</div>
 			<div id="links">
 				<div class="socials">
-					<a target="_blank" class="link" onclick="window.open('https://steamcommunity.com/id/lzrdblzzrd');"><i class="fab fa-steam-symbol fa-5x"></i></a>
-					<a target="_blank" class="link" onclick="window.open('https://soundcloud.com/lzrdblzzrd');"><i class="fab fa-soundcloud fa-5x"></i></a>
-					<a target="_blank" class="link" onclick="window.open('https://discord.gg/JnNPsTk');"><i class="fab fa-discord fa-5x"></i></a>
-					<a target="_blank" class="link" onclick="window.open('https://instagram.com/lzrdblzzrd');"><i class="fab fa-instagram fa-5x"></i></a>
-					<a target="_blank" class="link" onclick="window.open('https://t.me/lzrdblzzrd');"><i class="fab fa-telegram-plane fa-5x"></i></a>
+					<a target="_blank" class="link" id="steam" onclick="window.open('https://steamcommunity.com/id/lzrdblzzrd');"><i class="fab fa-steam-symbol fa-5x"></i></a>
+					<a target="_blank" class="link" id="soundcloud" onclick="window.open('https://soundcloud.com/lzrdblzzrd');"><i class="fab fa-soundcloud fa-5x"></i></a>
+					<a target="_blank" class="link" id="discord" onclick="window.open('https://discord.gg/JnNPsTk');"><i class="fab fa-discord fa-5x"></i></a>
+					<a target="_blank" class="link" id="instagram" onclick="window.open('https://instagram.com/lzrdblzzrd');"><i class="fab fa-instagram fa-5x"></i></a>
+					<a target="_blank" class="link" id="telegram" onclick="window.open('https://t.me/lzrdblzzrd');"><i class="fab fa-telegram-plane fa-5x"></i></a>
 				</div>
 			</div>
 		</div>
@@ -66,6 +66,10 @@
 		<div class="rainbowline" style="bottom: 0%"></div>
 		<script>
 			function onBodyLoad() {
+				document.title = "Loading..."
+				var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+				link.rel = 'icon';
+				link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACh0lEQVRYR72XMWzTQBSG36tUpykgwgbt1pklHQgMEFAHUJwiMdQMTCw1QgIJMSFm2AAJlqZLdjNEonWAAdFUSKQMdGHvBO2WAIXEBnTojGydfefznQ14S+6/e9977+7dOwSNr93pVPyfxg4QqAinIQx/+WTu+pXmQHVZVBGuOO4uAhxV0TKaPdsyj2XNkQK0nO4zALKYtYhsHAnpLl9ummmaVICW45Isw4cPHQwkX/a/ASFyuW2ZQlvCP9OMn63Nw1TJkHKNfR82+u+FGhEEByAyXq9VoVwqcYu+6r0BAAIL9dPc2MjzobfFgyQhYgAi4xfOnEz1+N6Dx8HY3ds3UzUvNvvcGAsRAaw47hoCNFm1zDjVqQBQHQeB8NxeMht0LAJIep9lXAdABBFGIQBInvN6bR7KGZtNF2DkedDb2mYCjJ9sqzEbAOTxXhcgLQrY7ryu+D++R6VT5aiFbqjugVA/9nzYYE6GMekfwdZTd8DWdpXc5wUQRGGIecOfJwWiNMQA6IY4Lzn3yQOtmwI6/+VmH9iiHQOgtf1U9XjWFRCNhwCyCRMTCHdu3Ygkb7c/wOev+9HvQgD3Hz7JvIS0AHRToBwqRihNAdXpnII8AMmyTFNAa0DUYv1ngEGhQqQbAWEhKlKKdQGS4acXUsplJG5AdA2y+tHYg9475jJC3LWXGjOFrmMdIJH3sX4gT0OiCsB3RbhmW42LMQDRXvgbx1K5JQu9ETalJ6pQnuKbUlkE+Abkj1ralMog6JhKr1C4Lc+CYL3+Zw+T0Miq03UJkKB7zfshwPqyZaY+75Qepy1n/SMAzuhAEIC9a0Ufp0mDj9qdyvQBY4e9OxKagTE5PXf10rmhKuxv7dY04RXN8/AAAAAASUVORK5CYII=';
 				jQuery("#loadinggif").fadeTo(500, 1);
 				jQuery("#bgndVideo").YTPlayer();
 				setTimeout(function() {
@@ -75,6 +79,10 @@
 					}, 500);
 					jQuery("#enterbutton").show();
 					jQuery("#enterbutton").fadeTo(500, 1);
+					document.title = "​";
+					var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+					link.rel = 'icon';
+					link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
 				}, 2000);
 			}
 		</script>
@@ -149,6 +157,83 @@
 			});
 
 			moveBackground();
+		</script>
+
+		<script>
+			$( "#steam" ).hover(
+				function() {
+					document.title = "Steam";
+					var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+					link.rel = 'icon';
+					link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABUklEQVQ4T2NkwALYRHX+YxP/9foKI7o4igCLiAFWjeia/ry5ANcHZzAJGROlGWbYv3dnwXohhKAZXs3/3p2EO4JJyBzO/v/+FCPEACEbnAb8e3uYgUnYluHR5bUMcrrBDDA+SN//d0cYGZmEHfHa/vfNPpQgYBZxYgCJgWiw5cwibjgN+PN6J0ZksIi6M4DEQTTYAFaZAJwG/Hq8HqyITTaQYfn0EobIzB4GkBiIDwOM////BxuwYNV+hoyqOXCJH3eWYksKDBwq0SjicAOQRXl0Uxm+XJ6NohAkhg0wclsW/P9yrB+rJEhww/4LDDHVC3HKg6ORx7Ua7I3Pu1owFPK61eDU/GV3KyQd8AS1wwPy1fJiBrHIXgYHXXmGA5cf4tQMkviyrhJiAAhwx00iKSl/XZSHSMpwQ3IXEGXI18kJmJkJ2a3c9RuxGvS10R8jOwMAXUZwAih0FgUAAAAASUVORK5CYII=';
+					document.getElementsByTagName('head')[0].appendChild(link);
+				}, function() {
+					document.title = "​";
+					var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+					link.rel = 'icon';
+					link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
+				}
+			);
+		</script>
+				<script>
+			$( "#soundcloud" ).hover(
+				function() {
+					document.title = "SoundCloud";
+					var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+					link.rel = 'icon';
+					link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAkklEQVQ4T2NkoBAwUqifYbgb8L+BgenHI76/yOHEOe8TirexhsH3JL7//xn+X2RkYNTHFsjIhqAYANIIkgTR+GIHw4DvSXz1nPM+NYI0fvv/W46LkfURMdHLyMCoDLeN8S+jyn/m/3cYGf53/mdgLCfGAJAaxme+DFz8onwV3PM+1RHrBZjhIK8M94RETEBSHAYAydw1Ar0g54gAAAAASUVORK5CYII=';
+				}, function() {
+					document.title = "​";
+					var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+					link.rel = 'icon';
+					link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
+				}
+			);
+		</script>
+				<script>
+			$( "#discord" ).hover(
+				function() {
+					document.title = "Discord";
+					var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+					link.rel = 'icon';
+					link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAfElEQVQ4T62T0Q3AIAhEj3TTztAxOkM3NTY0wSiejQb9hOMJhwqCR4L16AD3k7NCr1Oa3CheRCYAkAAcg85Kzi5ggKmpGkB1+1SxiRTydbAdoGQPHcWo0FpkzntwB6hX6AFsVApYcTIO8Fuw/TITmXbquf6Zuv8zrRio2hcmglaxilCskAAAAABJRU5ErkJggg==';
+				}, function() {
+					document.title = "​";
+					var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+					link.rel = 'icon';
+					link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
+				}
+			);
+		</script>
+				<script>
+			$( "#instagram" ).hover(
+				function() {
+					document.title = "Instagram";
+					var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+					link.rel = 'icon';
+					link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACtUlEQVQ4T32SX2hOYRzHP895d855XzPbroQbF9y4kCX5N2szLMMYmV1IiTDZbibmggsp/yNz4UYSxYVmzTKrGbMRi0jtQiilxjalbcb7nnOe56fzbEjJqd/59dTz+fy+z9OjmPiW734mqUCRSiuSASRDfnc/EpKRIRkJvhE8Y9jzolDFqP2t2tkrk9KKVOYPlApiCAv6WmwltcEXgycGF03Vy1Klqqp7JRkIqXC8zrUt+hXqn72p4D6uMnhK4xGh6st6xNfa2g93FnPn4Ev6uz/jxVEF27MMZKGYXjSN+ecK6FrQgqsiEo5BnV92T3wJ2dO9lu6Gxwx2fcQnwo1jqjhqDIOjHBY+2ca7Qz3MOl7Is0W3bELVtOS6eASsebyd7mWNNpanQgoeHfjrCG+KzxKRIox85vXs+CPoLTolvvrB3IdH+LByP66TYUZ7o4UHVteijcf09rN2/bbkJKFJMaerjueLb6DFRX0qqxE/a4z81quMVlTbjTktNxletxUjWWjx0MZnalsjH1YcITSTmN3ZwKvCy4R6Mmq0okoSKiDVfJtgY7kVeE13SVdWYMS1CSKTJL/1Cv1l9QQ6m5kdR+krukgQCzKVqyXhBCRudUB18fjLuPHQiqJNq+x0//Ydux4qr7GCGe1neFNyhiDKQcnmIiHbgSsPoK50XGCAxvt/XeLY+s0WjqdObbvI++XHyOhYsLtEyHHgdAc0n4S+TtBAxsCYwKhGRoRwAmZpKZMP7LL3EVhBwwohNwHZCmrb4MkleN0CP2LYwLCGrxoz4qCLN+Duq2WwfC+ZaIotJSfKhDwHpiQgqaCy5b9P+dv6Lb9hK4h3y821Ql6cwoEEEAiMGDuZLxqGIhiMMMMJ0nZyrpVMa7+grMBKnlaOH8VV8H0CHtIWtDWgkSFt4XSUS37rNcv+BJ5iVd3oUl+iAAAAAElFTkSuQmCC';
+				}, function() {
+					document.title = "​";
+					var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+					link.rel = 'icon';
+					link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
+				}
+			);
+		</script>
+				<script>
+			$( "#telegram" ).hover(
+				function() {
+					document.title = "Telegram";
+					var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+					link.rel = 'icon';
+					link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAj0lEQVQ4T6WTTRKAIAiFYdMh2tjROppHy0WXaGNDDcUgOP64RN/3HqgIkwsn9TAE2GLKZHzsAZsBIaYTAVaZuAnAbr8wXwC4VBOUojeurhcJLCE7WWLae2ZQE3r75P4BuD85XV3T120C9CEvGbdVJJCAmrgL4E2fzdyHRAm4Tz1IWW9+iRIyDLA+XlcCC3ADTR5KEQjpym8AAAAASUVORK5CYII=';
+				}, function() {
+					document.title = "​";
+					var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+					link.rel = 'icon';
+					link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
+				}
+			);
 		</script>
 		<style>
 			body, a:link{cursor:url(cursors/normal.cur), default;}

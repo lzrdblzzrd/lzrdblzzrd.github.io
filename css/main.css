@@ -78,11 +78,16 @@ body {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	transform: translate(-50%, -50%);    
-	-webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	-o-transform: translate(-50%, -50%);
+	animation: rotation 10s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 #particles-js {

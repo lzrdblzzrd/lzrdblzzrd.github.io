@@ -128,12 +128,12 @@
 			}
 		</script>
 		<script>
-			let enterbutton = document.getElementById('enterbutton');
-			const MoveEnterButton = (e) =>{
-				enterbutton.style.left = e.pageX + 'px';
-				enterbutton.style.top = e.pageY + 'px';
-			}
-			document.addEventListener('mousemove', MoveEnterButton);
+			$(document).on('mousemove', (event) => {
+				$('#enterbutton').css({
+					left: event.clientX,
+					top: event.clientY,
+				});
+			});
 		</script>
 		<script>
 			var lFollowX = 0,

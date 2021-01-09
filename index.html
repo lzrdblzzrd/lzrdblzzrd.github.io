@@ -80,10 +80,10 @@
 				});
 				setTimeout(function() {
 					jQuery("#loadinggif").fadeTo(250, 0);
+					jQuery("#enterbutton").fadeTo(250, 1);
 					setTimeout(function() {
 						jQuery("#loadinggif").hide();
 					}, 500);
-					jQuery("#enterbutton").fadeTo(1000, 1);
 					document.body.addEventListener('mouseenter', function(e) {
 						jQuery("#enterbutton").fadeTo(100, 1);
 					});
@@ -108,8 +108,7 @@
 				jQuery("#plugdiv").fadeTo(1000, 0);
 				jQuery("#maincontent").show();
 				setTimeout(function() {
-					jQuery("#enterbutton").hide();
-					jQuery("#plugdiv").hide();
+					jQuery("#plugdiv").remove();
 					jQuery("#maincontent").fadeTo(1000, 1);
 				}, 1000);
 				jQuery("#bgndVideo").YTPUnmute();
@@ -153,7 +152,7 @@
 				translate = 'translate(' + x + 'px, ' + y + 'px)';
 
 				$('#logo, #links').css({
-					'-webit-transform': translate,
+					'-webkit-transform': translate,
 					'-moz-transform': translate,
 					'transform': translate
 				});
@@ -253,7 +252,6 @@
 		<style>
 			body, a:link{cursor:url(cursors/normal.cur), default;}
 			a:hover {cursor:url(cursors/hover.cur),pointer;}
-			#enterbutton:hover {cursor:url(cursors/hover.cur),pointer;}
 		</style>
 	</body>
 </html>

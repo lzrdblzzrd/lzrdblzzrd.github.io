@@ -72,13 +72,26 @@
 				link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACh0lEQVRYR72XMWzTQBSG36tUpykgwgbt1pklHQgMEFAHUJwiMdQMTCw1QgIJMSFm2AAJlqZLdjNEonWAAdFUSKQMdGHvBO2WAIXEBnTojGydfefznQ14S+6/e9977+7dOwSNr93pVPyfxg4QqAinIQx/+WTu+pXmQHVZVBGuOO4uAhxV0TKaPdsyj2XNkQK0nO4zALKYtYhsHAnpLl9ummmaVICW45Isw4cPHQwkX/a/ASFyuW2ZQlvCP9OMn63Nw1TJkHKNfR82+u+FGhEEByAyXq9VoVwqcYu+6r0BAAIL9dPc2MjzobfFgyQhYgAi4xfOnEz1+N6Dx8HY3ds3UzUvNvvcGAsRAaw47hoCNFm1zDjVqQBQHQeB8NxeMht0LAJIep9lXAdABBFGIQBInvN6bR7KGZtNF2DkedDb2mYCjJ9sqzEbAOTxXhcgLQrY7ryu+D++R6VT5aiFbqjugVA/9nzYYE6GMekfwdZTd8DWdpXc5wUQRGGIecOfJwWiNMQA6IY4Lzn3yQOtmwI6/+VmH9iiHQOgtf1U9XjWFRCNhwCyCRMTCHdu3Ygkb7c/wOev+9HvQgD3Hz7JvIS0AHRToBwqRihNAdXpnII8AMmyTFNAa0DUYv1ngEGhQqQbAWEhKlKKdQGS4acXUsplJG5AdA2y+tHYg9475jJC3LWXGjOFrmMdIJH3sX4gT0OiCsB3RbhmW42LMQDRXvgbx1K5JQu9ETalJ6pQnuKbUlkE+Abkj1ralMog6JhKr1C4Lc+CYL3+Zw+T0Miq03UJkKB7zfshwPqyZaY+75Qepy1n/SMAzuhAEIC9a0Ufp0mDj9qdyvQBY4e9OxKagTE5PXf10rmhKuxv7dY04RXN8/AAAAAASUVORK5CYII=';
 				jQuery("#loadinggif").fadeTo(500, 1);
 				jQuery("#bgndVideo").YTPlayer();
+				$(document).on('mousemove', (event) => {
+					$('#enterbutton').css({
+						left: event.clientX,
+						top: event.clientY,
+					});
+				});
 				setTimeout(function() {
 					jQuery("#loadinggif").fadeTo(250, 0);
 					setTimeout(function() {
 						jQuery("#loadinggif").hide();
 					}, 500);
-					jQuery("#enterbutton").show();
-					jQuery("#enterbutton").fadeTo(500, 1);
+					jQuery("#enterbutton").fadeTo(1000, 1);
+					document.body.addEventListener('mouseenter', function(e) {
+						jQuery("#enterbutton").fadeTo(100, 1);
+					});
+					document.body.addEventListener('mouseout', function(e) {
+						if (!e.relatedTarget && !e.toElement) {
+							jQuery("#enterbutton").fadeTo(100, 0);
+						}
+					});
 					document.title = "​";
 					var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
 					link.rel = 'icon';
@@ -126,14 +139,6 @@
 			if (isMobile) {
 			  window.location = 'mobile/';
 			}
-		</script>
-		<script>
-			$(document).on('mousemove', (event) => {
-				$('#enterbutton').css({
-					left: event.clientX,
-					top: event.clientY,
-				});
-			});
 		</script>
 		<script>
 			var lFollowX = 0,

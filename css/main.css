@@ -9,17 +9,28 @@ body {
 	padding: 0;
 }
 
-.rainbowline {
+.rainbowlinetop {
+	top: 0px;
 	z-index: 99;
 	height: 0.25%;
 	width: 100%;
 	position: absolute;
 	background: linear-gradient(124deg, #ff0000, #ff4000, #ff8000, #ffbf00, #ffff00, #bfff00, #80ff00, #40ff00, #00ff00, #00ff40, #00ff80, #00ffbf, #00ffff, #00bfff, #0080ff, #0040ff, #0000ff, #4000ff, #8000ff, #bf00ff, #ff00ff);
-	background: -webkit-linear-gradient(124deg, #ff0000, #ff4000, #ff8000, #ffbf00, #ffff00, #bfff00, #80ff00, #40ff00, #00ff00, #00ff40, #00ff80, #00ffbf, #00ffff, #00bfff, #0080ff, #0040ff, #0000ff, #4000ff, #8000ff, #bf00ff, #ff00ff);
-	background: -o-linear-gradient(124deg, #ff0000, #ff4000, #ff8000, #ffbf00, #ffff00, #bfff00, #80ff00, #40ff00, #00ff00, #00ff40, #00ff80, #00ffbf, #00ffff, #00bfff, #0080ff, #0040ff, #0000ff, #4000ff, #8000ff, #bf00ff, #ff00ff);
-	background: linear-gradient(124deg, #ff0000, #ff4000, #ff8000, #ffbf00, #ffff00, #bfff00, #80ff00, #40ff00, #00ff00, #00ff40, #00ff80, #00ffbf, #00ffff, #00bfff, #0080ff, #0040ff, #0000ff, #4000ff, #8000ff, #bf00ff, #ff00ff);
 	background-size: 1000% 100%;
+	-webkit-animation: rainbow 20s ease infinite;
+	-z-animation: rainbow 20s ease infinite;
+	-o-animation: rainbow 20s ease infinite;
+	animation: rainbow 20s ease infinite;
+}
 
+.rainbowlinebottom {
+	bottom: 0px;
+	z-index: 99;
+	height: 0.25%;
+	width: 100%;
+	position: absolute;
+	background: linear-gradient(124deg, #ff00ff, #bf00ff, #8000ff, #4000ff, #0000ff, #0040ff, #0080ff, #00bfff, #00ffff, #00ffbf, #00ff80, #00ff40, #00ff00, #40ff00, #80ff00, #bfff00, #ffff00, #ffbf00, #ff8000, #ff4000, #ff0000);
+	background-size: 1000% 100%;
 	-webkit-animation: rainbow 20s ease infinite;
 	-z-animation: rainbow 20s ease infinite;
 	-o-animation: rainbow 20s ease infinite;

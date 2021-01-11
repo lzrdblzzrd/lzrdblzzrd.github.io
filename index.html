@@ -49,10 +49,9 @@
 			</div>
 		</div>
 		<div id="content">
-			<div id="logo" onclick="document.location.reload();">
-				<img src="img/logo.gif" width="400px" height="100px">
+			<div id="logo" class="moving" onclick="document.location.reload();">
 			</div>
-			<div id="links">
+			<div id="links" class="moving">
 				<div class="socials">
 					<a target="_blank" class="link" id="steam" onclick="window.open('https://steamcommunity.com/id/lzrdblzzrd');"><i class="fab fa-steam-symbol fa-5x"></i></a>
 					<a target="_blank" class="link" id="soundcloud" onclick="window.open('https://soundcloud.com/lzrdblzzrd');"><i class="fab fa-soundcloud fa-5x"></i></a>
@@ -62,16 +61,14 @@
 				</div>
 			</div>
 		</div>
-		<div class="rainbowlinetop"></div>
-		<div class="rainbowlinebottom"></div>
 		<script>
 			function onBodyLoad() {
 				document.title = "Loading..."
 				var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
 				link.rel = 'icon';
 				link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACh0lEQVRYR72XMWzTQBSG36tUpykgwgbt1pklHQgMEFAHUJwiMdQMTCw1QgIJMSFm2AAJlqZLdjNEonWAAdFUSKQMdGHvBO2WAIXEBnTojGydfefznQ14S+6/e9977+7dOwSNr93pVPyfxg4QqAinIQx/+WTu+pXmQHVZVBGuOO4uAhxV0TKaPdsyj2XNkQK0nO4zALKYtYhsHAnpLl9ummmaVICW45Isw4cPHQwkX/a/ASFyuW2ZQlvCP9OMn63Nw1TJkHKNfR82+u+FGhEEByAyXq9VoVwqcYu+6r0BAAIL9dPc2MjzobfFgyQhYgAi4xfOnEz1+N6Dx8HY3ds3UzUvNvvcGAsRAaw47hoCNFm1zDjVqQBQHQeB8NxeMht0LAJIep9lXAdABBFGIQBInvN6bR7KGZtNF2DkedDb2mYCjJ9sqzEbAOTxXhcgLQrY7ryu+D++R6VT5aiFbqjugVA/9nzYYE6GMekfwdZTd8DWdpXc5wUQRGGIecOfJwWiNMQA6IY4Lzn3yQOtmwI6/+VmH9iiHQOgtf1U9XjWFRCNhwCyCRMTCHdu3Ygkb7c/wOev+9HvQgD3Hz7JvIS0AHRToBwqRihNAdXpnII8AMmyTFNAa0DUYv1ngEGhQqQbAWEhKlKKdQGS4acXUsplJG5AdA2y+tHYg9475jJC3LWXGjOFrmMdIJH3sX4gT0OiCsB3RbhmW42LMQDRXvgbx1K5JQu9ETalJ6pQnuKbUlkE+Abkj1ralMog6JhKr1C4Lc+CYL3+Zw+T0Miq03UJkKB7zfshwPqyZaY+75Qepy1n/SMAzuhAEIC9a0Ufp0mDj9qdyvQBY4e9OxKagTE5PXf10rmhKuxv7dY04RXN8/AAAAAASUVORK5CYII=';
-				jQuery("#loadinggif").fadeTo(500, 1);
-				jQuery("#bgndVideo").YTPlayer();
+				$("#loadinggif").fadeTo(500, 1);
+				$("#bgndVideo").YTPlayer();
 				$(document).on('mousemove', (event) => {
 					$('#enterbutton').css({
 						left: event.clientX,
@@ -79,17 +76,17 @@
 					});
 				});
 				setTimeout(function() {
-					jQuery("#loadinggif").fadeTo(250, 0);
-					jQuery("#enterbutton").fadeTo(250, 1);
+					$("#loadinggif").fadeTo(250, 0);
+					$("#enterbutton").fadeTo(250, 1);
 					setTimeout(function() {
-						jQuery("#loadinggif").hide();
+						$("#loadinggif").remove();
 					}, 500);
 					document.body.addEventListener('mouseenter', function(e) {
-						jQuery("#enterbutton").fadeTo(100, 1);
+						$("#enterbutton").fadeTo(100, 1);
 					});
 					document.body.addEventListener('mouseout', function(e) {
 						if (!e.relatedTarget && !e.toElement) {
-							jQuery("#enterbutton").fadeTo(100, 0);
+							$("#enterbutton").fadeTo(100, 0);
 						}
 					});
 					document.title = "​";
@@ -104,15 +101,19 @@
 			var random = videos[Math.floor(Math.random() * videos.length)];
 
 			function enter(e) {
-				jQuery("#enterbutton").fadeTo(1000, 0);
-				jQuery("#plugdiv").fadeTo(1000, 0);
-				jQuery("#maincontent").show();
+				$("#enterbutton").css( 'pointer-events', 'none' );
+				$("#enterbutton").fadeTo(1000, 0);
+				$("#plugdiv").fadeTo(1000, 0);
+				$("#logo, #links").addClass("parallax");
+				$('<img src="img/logo.png" width="400px" height="100px" style="filter: drop-shadow(0 0 10px rgba(0,0,0,0.75));">').appendTo('#logo');
+				$('<div class="rainbowlinetop"></div><div class="rainbowlinebottom"></div>').appendTo('body');
+				$("#maincontent").show();
 				setTimeout(function() {
-					jQuery("#plugdiv").remove();
-					jQuery("#maincontent").fadeTo(1000, 1);
+					$("#plugdiv").remove();
+					$("#maincontent").fadeTo(1000, 1);
 				}, 1000);
-				jQuery("#bgndVideo").YTPUnmute();
-				jQuery("#bgndVideo").YTPPlay();
+				$("#bgndVideo").YTPUnmute();
+				$("#bgndVideo").YTPPlay();
 			}
 		</script>
 		<script>
@@ -148,7 +149,7 @@
 
 				translate = 'translate(' + x + 'px, ' + y + 'px)';
 
-				$('#logo, #links').css({
+				$('.parallax').css({
 					'-webkit-transform': translate,
 					'-moz-transform': translate,
 					'transform': translate
@@ -249,6 +250,7 @@
 		<style>
 			body, a:link{cursor:url(cursors/normal.cur), default;}
 			a:hover {cursor:url(cursors/hover.cur),pointer;}
+			#enterbutton:hover {cursor:url(cursors/hover.cur),pointer;}
 		</style>
 	</body>
 </html>

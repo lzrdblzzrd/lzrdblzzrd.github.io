@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Планировщик персонажа Fallout 4</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript" >
+		(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+		m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+		ym(75487888, "init", {
+			clickmap:true,
+			trackLinks:true,
+			accurateTrackBounce:true
+		});
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/75487888" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+				<a class="navbar-brand" onclick="window.open('https://fallout.fandom.com/ru/wiki/%D0%A1%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82%D0%B8_Fallout_4');">
+                    <img alt="Brand" src="img/brand.png" style="height:20px;width:20px;">
+                </a>
+                <a class="navbar-brand" onclick="window.open('https://fallout.fandom.com/ru/wiki/%D0%A1%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82%D0%B8_Fallout_4');">Планировщик персонажа Fallout 4</a>
+                <form class="navbar-form navbar-left">
+                    </button><a class="btn btn-danger" href="" role="button">Сбросить</a>
+					</button><a class="btn btn-info" href="#" role="button">На страницу проекта</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <h3>S.P.E.C.I.A.L.</h3>
+                <h3 class="bold points-left">Загрузка...</h3><!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label style="font-weight:normal;"><input type="checkbox" class="include-bobbleheads" /> Включить болванки </label>-->
+                <ul class="list-group list-special">
+                    <li data-special="st" data-special-ru="СИЛ" class="list-group-item clearfix">
+                        СИЛА
+
+                        <span class="pull-right">
+                            <button class="btn btn-primary btn-xs btn-dec"><i class="glyphicon glyphicon-minus"></i></button>
+                            <input type="number" min="1" max="10" class="form-control" value="1" readonly/>
+                            <button class="btn btn-primary btn-xs btn-inc"><i class="glyphicon glyphicon-plus"></i></button>
+                        </span>
+                    </li>
+                    <li data-special="pe" data-special-ru="ВСП" class="list-group-item clearfix">
+                        ВОСПРИЯТИЕ
+
+                        <span class="pull-right">
+                            <button class="btn btn-primary btn-xs btn-dec"><i class="glyphicon glyphicon-minus"></i></button>
+                            <input type="number" min="1" max="10" class="form-control" value="1" readonly/>
+                            <button class="btn btn-primary btn-xs btn-inc"><i class="glyphicon glyphicon-plus"></i></button>
+                        </span>
+                    </li>
+                    <li data-special="en" data-special-ru="ВЫН" class="list-group-item clearfix">
+                        ВЫНОСЛИВОСТЬ
+
+                        <span class="pull-right">
+                            <button class="btn btn-primary btn-xs btn-dec"><i class="glyphicon glyphicon-minus"></i></button>
+                            <input type="number" min="1" max="10" class="form-control" value="1" readonly/>
+                            <button class="btn btn-primary btn-xs btn-inc"><i class="glyphicon glyphicon-plus"></i></button>
+                        </span>
+                    </li>
+                    <li data-special="ch" data-special-ru="ХАР" class="list-group-item clearfix">
+                        ХАРИЗМА
+
+                        <span class="pull-right">
+                            <button class="btn btn-primary btn-xs btn-dec"><i class="glyphicon glyphicon-minus"></i></button>
+                            <input type="number" min="1" max="10" class="form-control" value="1" readonly/>
+                            <button class="btn btn-primary btn-xs btn-inc"><i class="glyphicon glyphicon-plus"></i></button>
+                        </span>
+                    </li>
+                    <li data-special="in" data-special-ru="ИНТ" class="list-group-item clearfix">
+                        ИНТЕЛЛЕКТ
+
+                        <span class="pull-right">
+                            <button class="btn btn-primary btn-xs btn-dec"><i class="glyphicon glyphicon-minus"></i></button>
+                            <input type="number" min="1" max="10" class="form-control" value="1" readonly/>
+                            <button class="btn btn-primary btn-xs btn-inc"><i class="glyphicon glyphicon-plus"></i></button>
+                        </span>
+                    </li>
+                    <li data-special="ag" data-special-ru="ЛОВ" class="list-group-item clearfix">
+                        ЛОВКОСТЬ
+
+                        <span class="pull-right">
+                            <button class="btn btn-primary btn-xs btn-dec"><i class="glyphicon glyphicon-minus"></i></button>
+                            <input type="number" min="1" max="10" class="form-control" value="1" readonly/>
+                            <button class="btn btn-primary btn-xs btn-inc"><i class="glyphicon glyphicon-plus"></i></button>
+                        </span>
+                    </li>
+                    <li data-special="lu" data-special-ru="УДЧ" class="list-group-item clearfix">
+                        УДАЧА
+
+                        <span class="pull-right">
+                            <button class="btn btn-primary btn-xs btn-dec"><i class="glyphicon glyphicon-minus"></i></button>
+                            <input type="number" min="1" max="10" class="form-control" value="1" readonly/>
+                            <button class="btn btn-primary btn-xs btn-inc"><i class="glyphicon glyphicon-plus"></i></button>
+                        </span>
+                    </li>
+                </ul>
+                <h4>Сводка:</h4>
+                <span class="required-level">Загрузка...</span>
+                <ul class="summary">
+
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <table class="table"></table>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/perks.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

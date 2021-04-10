@@ -1,0 +1,180 @@
+﻿body {
+	color:#FFF;
+	background-color:#36393f;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+
+.list-group-item:first-child, .list-group-item:last-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.btn-dec-perk, .btn-inc-perk {
+	opacity: 0.75
+}
+
+.container-fluid {
+	background-color:#202225;
+}
+
+.navbar-default {
+    background-color: #202225;
+    border: none;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border:none;
+}
+
+.list-special {
+	font-size: 20px;
+    font-weight: bold;
+	color:#2f3136;
+	background-color:#2f3136;
+}
+
+.row {
+    background: #2f3136;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+	border-left: 1px solid #42454a; border-right: 1px solid #42454a;
+	border-top: none;
+}
+
+.table>tbody>tr>th {
+	text-align: center;
+}
+
+.popover {
+	background:#202225;
+	border-radius:0px;
+}
+
+.popover-title {
+	font-weight:bolder;
+    color:#FFF;
+	background:#2f3136;
+	border:none;
+	border-radius:0px;
+}
+
+.popover-content {
+	font-style:italic;
+    color:#FFF;
+	background:#36393f;
+	border-radius:0px;
+}
+
+.popover.left>.arrow:after, .popover.right>.arrow:after, .popover.top>.arrow:after, .popover.bottom>.arrow:after {
+	border-left-color:#1a1b1e;
+	color: #202225;
+}
+
+.col-md-3>h3, .col-md-3>h4, .col-md-3>span{
+	font-size: 25px;
+	text-align: center;
+}
+
+.form-control {
+    color: #FFF;
+    background-color: #36393f;
+	border:1px solid #42454a;
+}
+
+select.form-control {
+  -moz-appearance: none;
+   -webkit-appearance: none;
+   appearance: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #36393f;
+    opacity: 1;
+	margin: 0;
+}
+
+.col-md-3 {
+	color:#FFF;
+	background-color:#2f3136;
+	border: 1px solid #42454a;
+}
+
+.col-md-9 {
+	color:#FFF;
+	background-color:#36393f;
+	padding-right: 0;
+    padding-left: 0;
+}
+
+.list-group-item {
+	color:#FFF;
+	background-color:#2f3136;
+	border: 1px solid #42454a;
+}
+
+.list-special input {
+    display: inline-block;
+    width: 45px;
+	height: 20px;
+}
+
+.unavailable {
+    opacity: 0.25;
+}
+
+.perk {
+    width: 100px;
+    height: 100px;
+    border:1px solid #42454a;
+    position:relative;
+	left: 50%;
+    transform: translate(-50%);
+}
+
+.overlay {
+    bottom:0px;
+    position:absolute;
+    width:100%;
+    text-align:center;
+    color:#FFF;
+    font-weight:bold;
+    background-color: rgba(0,0,0, 0.25)    /* 40% opaque red */  
+}
+
+.has-rank {
+    font-size:14px;
+	font-style:normal;
+	font-weight:bold;
+    background-color:rgba(46,204,113, 0.25);
+    padding:2px;
+    border-radius:0px;
+    color:#fff;
+}
+
+.no-rank {
+    font-size:12px;
+}

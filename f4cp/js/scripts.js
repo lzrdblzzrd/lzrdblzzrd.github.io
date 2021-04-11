@@ -289,12 +289,16 @@ $(function () {
 
         renderAll();
     });
-	
-	$('.saveToFile').on('click', function () {
-		html2canvas($(".col-md-3")[0]).then(function(canvas) {
-			canvas.toBlob(function(blob) {
-				saveAs(blob, "F4CP Билд.png");
-			});
-        });
-	});
 });
+
+$('.saveToFile').on('click', function () {
+	html2canvas($(".col-md-3")[0]).then(function(canvas) {
+		canvas.toBlob(function(blob) {
+			saveAs(blob, "F4CP Билд.png");
+		});
+    });
+});
+
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})

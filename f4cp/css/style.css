@@ -45,6 +45,7 @@
 	border: 1px solid #42454a;
 }
 .col-md-3>h3, .col-md-3>h4, .col-md-3>span{
+	font-family: monospace;
 	font-size: 25px;
 	text-align: center;
 }
@@ -56,6 +57,7 @@
 	border-bottom-right-radius: 0;
 }
 .list-special {
+	font-family: monospace;
 	font-size: 20px;
     font-weight: bold;
 	color:#2f3136;
@@ -73,6 +75,7 @@
 }
 
 .form-control {
+	
     color: #FFF;
     background-color: #36393f;
 	border:1px solid #42454a;

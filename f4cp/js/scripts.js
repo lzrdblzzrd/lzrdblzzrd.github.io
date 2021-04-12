@@ -121,6 +121,12 @@ var requiredLevel = function () {
 
 var renderRequiredLevel = function () {
     $('.required-level').text('Необходимый уровень: ' + requiredLevel());
+	if (requiredLevel() <= 0) {
+		$('.required-level').hide();
+	} else {
+		$('.required-level').removeClass("hidden");
+		$('.required-level').show();
+	}
 }
 
 var renderAll = function () {
@@ -156,9 +162,12 @@ var calculatePoints = function () {
     //if (includeBobbleheads()) {
     //    remaining += 7;
     //}
-    if (remaining < 0) {
+    if (remaining <= 0) {
         remaining = 0;
-    }
+		$(".points-left").hide(250);
+    } else {
+		$(".points-left").show(250);
+	};
     $pointsLeft.text(remaining + ' очков осталось');
 }
 
@@ -186,14 +195,14 @@ var renderSummary = function () {
     for (var i = 0; i < perks.length; ++i) {
         for (var j = 0; j < perks[i].perks.length; ++j) {
             var perk = perks[i].perks[j];
-            if (perk.currentRank && perk.currentRank > 0) {
-                html += '<li>' + perk.name_ru + ': ' + perk.currentRank + '/' + perk.ranks + '</li>';
-                html += '<ul>';
-                for (var k = 0; k < perk.currentRank; ++k) {
-                    html += '<li>' + perk.ranked[k].description + '</li>';
-                }
-                html += '</ul>';
-            }
+			if (perk.currentRank && perk.currentRank > 0) {
+				html += '<li>' + perk.name_ru + ': ' + perk.currentRank + '/' + perk.ranks + '</li>';
+				html += '<ul>';
+				for (var k = 0; k < perk.currentRank; ++k) {
+					html += '<li>' + perk.ranked[k].description + '</li>';
+				}
+				html += '</ul>';
+			}
         }
     }
 

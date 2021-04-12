@@ -671,7 +671,7 @@
             {
                 rank: 5,
 				name: 'Aquaboy',
-                name_ru: 'Аква-мальчик / Аква-девочка',
+                name_ru: 'Аква-мальчик',
                 img: 'aquaboy.png',
                 ranks: 2,
                 ranked: [
@@ -848,8 +848,8 @@
             },
             {
                 rank: 2,
-				name: 'Lady Killer / Black Widow',
-                name_ru: 'Женоубийца / Чёрная вдова',
+				name: 'Lady Killer',
+                name_ru: 'Женоубийца',
                 img: 'lady-killer-black-widow.png',
                 ranks: 3,
                 ranked: [
@@ -973,8 +973,8 @@
             },
             {
                 rank: 7,
-				name: 'Party Boy / Party Girl',
-                name_ru: 'Тусовщик / Тусовщица',
+				name: 'Party Boy',
+                name_ru: 'Тусовщик',
                 img: 'party-boy-party-girl.png',
                 ranks: 3,
                 ranked: [

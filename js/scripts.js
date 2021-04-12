@@ -93,6 +93,20 @@ function parallax() {
 
 
 function titleChange() {
+	$( "#steam" ).hover(
+		function() {
+			document.title = "Steam";
+			var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+			link.rel = 'icon';
+			link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABUklEQVQ4T2NkwALYRHX+YxP/9foKI7o4igCLiAFWjeia/ry5ANcHZzAJGROlGWbYv3dnwXohhKAZXs3/3p2EO4JJyBzO/v/+FCPEACEbnAb8e3uYgUnYluHR5bUMcrrBDDA+SN//d0cYGZmEHfHa/vfNPpQgYBZxYgCJgWiw5cwibjgN+PN6J0ZksIi6M4DEQTTYAFaZAJwG/Hq8HqyITTaQYfn0EobIzB4GkBiIDwOM////BxuwYNV+hoyqOXCJH3eWYksKDBwq0SjicAOQRXl0Uxm+XJ6NohAkhg0wclsW/P9yrB+rJEhww/4LDDHVC3HKg6ORx7Ua7I3Pu1owFPK61eDU/GV3KyQd8AS1wwPy1fJiBrHIXgYHXXmGA5cf4tQMkviyrhJiAAhwx00iKSl/XZSHSMpwQ3IXEGXI18kJmJkJ2a3c9RuxGvS10R8jOwMAXUZwAih0FgUAAAAASUVORK5CYII=';
+			document.getElementsByTagName('head')[0].appendChild(link);
+		}, function() {
+			document.title = "​";
+			var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+			link.rel = 'icon';
+			link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
+				}
+	);
 	$( "#soundcloud" ).hover(
 		function() {
 			document.title = "SoundCloud";

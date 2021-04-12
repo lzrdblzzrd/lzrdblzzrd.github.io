@@ -76,8 +76,9 @@
 						top: event.clientY,
 					});
 				});
-				setTimeout(function() {
-					$("#loadinggif").fadeTo(250, 0);
+				myPlayer = jQuery('#bgndVideo').YTPlayer( {
+					onReady: function( player ) {
+                    $("#loadinggif").fadeTo(250, 0);
 					$("#enterbutton").fadeTo(250, 1);
 					setTimeout(function() {
 						$("#loadinggif").remove();
@@ -94,7 +95,8 @@
 					var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
 					link.rel = 'icon';
 					link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
-				}, 2000);
+					}
+				});    
 			}
 		</script>
 		<script>
@@ -115,6 +117,9 @@
 				$("#bgndVideo").YTPUnmute();
 				$("#bgndVideo").YTPPlay();
 			}
+		</script>
+		<script>
+		
 		</script>
 		<script>
 			function stop() {

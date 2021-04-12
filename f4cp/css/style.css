@@ -76,13 +76,14 @@
 
 
 .summary>li {
+	margin-top: -10px;
 	font-size: 150%;
 	font-weight: bolder;
 	font-family: monospace;
 }
 .summary>ul>li {
 	border-bottom: 1px solid #42454a;
-	margin-top: -1%;
+	margin-top: -2px;
 	font-style: italic;
 }
 .summary>ul>:last-child {
@@ -168,7 +169,7 @@ input[type=number] {
 
 
 .has-rank {
-	color: #FFF680;
+	color: #FFFDE0;
     font-size: 120%;
 	font-style: normal;
 	font-weight: bold;

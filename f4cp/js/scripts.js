@@ -121,16 +121,10 @@ var requiredLevel = function () {
 
 var renderRequiredLevel = function () {
     $('.required-level').text('Необходимый уровень: ' + requiredLevel());
-	if (requiredLevel() <= 0) {
-		$('.required-level').hide();
-	} else {
-		$('.required-level').removeClass("hidden");
-		$('.required-level').show();
-	}
 }
 
 var renderAll = function () {
-    renderPerks();
+	renderPerks();
     calculatePoints();
     renderRequiredLevel();
     renderSummary();
@@ -142,20 +136,15 @@ var renderAll = function () {
             perk = perks[j].perks[i],
 			special = getSPECIAL();
 			className = i > special[j].value - 1 ? ' unavailable' : '';
-			if (e.which === 1) {
-				if (perk.currentRank < perk.ranks && className !== ' unavailable') {
-					perk.currentRank += 1;
-				}
-			} else if (e.which === 3 && className !== ' unavailable') {
-				if (perk.currentRank > 0) {
-					perk.currentRank -= 1;
-			} else if (e.which === 2 && className !== ' unavailable') {
-				perk.currentRank = 0;
+			if (e.which === 1 && perk.currentRank < perk.ranks && className !== ' unavailable') {
+				perk.currentRank += 1;
+				renderAll();
+			} else if (e.which === 3 && perk.currentRank != 0 && className !== ' unavailable') {
+				perk.currentRank -= 1;
+				renderAll();
 			};
-		}
-        renderAll();
-    });
-}
+	});
+};
 
 var calculatePoints = function () {
     var remaining = totalPoints - getAllocatedPoints();

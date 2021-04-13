@@ -1,4 +1,7 @@
-﻿body {
+﻿html {
+	border: 1px solid #42454a;
+}
+body {
 	color: #FFF;
 	background-color: #36393f;
 }
@@ -177,11 +180,22 @@ input[type=number] {
 	border-bottom: none;
 	margin: none;
 }
-.popover.left>.arrow:after, .popover.right>.arrow:after, .popover.top>.arrow:after, .popover.bottom>.arrow:after {
+.popover.left>.arrow:after {
 	border-left-color: #1a1b1e;
 	color: #202225;
 }
-
+popover.right>.arrow:after{
+	border-right-color: #1a1b1e;
+	color: #202225;
+}
+.popover.top>.arrow:after {
+	border-top-color: #1a1b1e;
+	color: #202225;
+}
+.popover.bottom>.arrow:after {
+	border-bottom-color: #1a1b1e;
+	color: #202225;
+}
 
 .has-rank {
 	color: #FFFDE0;

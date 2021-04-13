@@ -30,7 +30,7 @@ var renderPerks = function () {
                 return '<p class=' + rankClass + '>Ранг ' + rank.rank + ' (' + rank.level + '): ' + rank.description + '</p>';
             }).join('');
 
-            html += '<td><div oncontextmenu="return false;" data-placement="left" data-trigger="hover" data-original-title="' + perk.name_ru + '" rel="popover" data-html="true" data-content="' + title + '" data-i="' + i + '" data-j="' + j + '" class="perk' + className + '" style="background-image:url(\'img/' + perk.img + '\');">';
+            html += '<td><div data-placement="left" data-trigger="hover" data-original-title="' + perk.name_ru + '" rel="popover" data-html="true" data-content="' + title + '" data-i="' + i + '" data-j="' + j + '" class="perk' + className + '" style="background-image:url(\'img/' + perk.img + '\');">';
             if (className !== ' unavailable') {
                 html += '<div class="overlay">&nbsp;' + perk.currentRank + ' / ' + perk.ranks + '&nbsp;</div>';
             }

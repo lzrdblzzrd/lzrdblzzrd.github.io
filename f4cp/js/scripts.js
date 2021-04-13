@@ -147,10 +147,8 @@ var renderAll = function () {
 };
 
 var calculatePoints = function () {
+	
     var remaining = totalPoints - getAllocatedPoints();
-    if (includeBobbleheads()) {
-		remaining += 7;
-    }
     if (remaining <= 0) {
         remaining = 0;
 		$(".points-left").hide(250);
@@ -225,6 +223,11 @@ $(function () {
     renderAll();
 
     $includeBobbleheads.on('click', function () {
+		if (includeBobbleheads()) {
+			totalPoints += 7;
+		} else {
+			totalPoints -= 7;
+		}
 		renderAll();
     });
 
@@ -233,9 +236,6 @@ $(function () {
             $input = $li.find('input'),
             value = parseInt($input.val()),
             remaining = totalPoints - getAllocatedPoints();
-
-        if (remaining === 0)
-			return;
 
         if (value < 10) {
             $input.val(value + 1);

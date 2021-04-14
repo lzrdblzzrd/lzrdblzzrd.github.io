@@ -2,48 +2,50 @@
 <html>
 	<head>
 		<title>&#8203;</title>
-		<meta http-equiv = "refresh" content = "5; url = https://lzrdblzzrd.space/"/>
 		<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+		<script src="https://code.jquery.com/git/jquery-git.js"></script>
 	</head>
 	<body bgcolor="black">
-		<div class="centered rainbow">
-			<span onclick="alert('here is nothing');">placeholder for other files. nothing more.</span>
+		<div class="rainbowDiv centered">
+			<span class="span">a placeholder to store different files. nothing else.</span>
 		</div>
 		<style>
+			html {
+				cursor: none;
+				user-select: none;
+			}
 			.centered {
-				color: white;
-				font-size: 25px;
+				font-family: monospace;
+				font-size: 1.5vw;
+				text-align: center;
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				-moz-transform: translateX(-50%) translateY(-50%);
-				-webkit-transform: translateX(-50%) translateY(-50%);
 				transform: translateX(-50%) translateY(-50%);
-			}
-			
-			.rainbow {
-				background: repeating-linear-gradient(to right, #FF0000, #FFA500, #FFFF00, #008000, #00FFFF, #0000FF, #EE82EE);
-				-webkit-background-clip: text;
-				background-clip: text;
-				color: transparent;
-				animation: rainbow_animation 5s infinite;
-				background-size: 1000% 100%;
-			}
-			
-			@keyframes rainbow_animation {
-				0%,100% {
-					background-position: 0 0;
-				}
-
-				50% {
-					background-position: 100% 0;
-				}
 			}
 		</style>
 		<script>
+			var angle = sessionStorage['angle'] || 'defaultValue';
+			var len = $(".span").text().length;
+			var rainbowSpans = $(".span").text().split('').map(function(char) {
+				return '<span class="rainbowSpan">' + char + '</span>';
+			});
+			$(".rainbowDiv").empty().append(rainbowSpans)
+			
+			var span = $(".rainbowSpan");
+			
+			(function RainbowColor() {
+				for (var i = 0; i < len; i++) {
+					$(span[i]).css({"color":"hsl(" + (angle + Math.floor(i * (180 / len))) + ", 100%, 50%)"});
+				};
+				(angle < 360 ? angle++ : angle = 0); sessionStorage['angle'] = angle;
+				requestAnimationFrame(RainbowColor);
+			})();
+		</script>
+		<script>
 			function stop() {
 				return false
-			}
+			};
 			
 			document.ondragstart = stop;
 			document.onselectstart = stop;

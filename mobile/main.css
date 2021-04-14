@@ -1,3 +1,7 @@
+body {
+	overflow: hidden;
+}
+
 @keyframes alertred{
 	0%{
 		color: red
@@ -33,7 +37,6 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	margin: 0;
 	transform: translate(-50%, -50%);
 	animation-name: alertred;
 	-webkit-animation-name: alertred;
@@ -41,12 +44,4 @@
 	-webkit-animation-duration: 2.5s;
 	animation-iteration-count: infinite;
 	-webkit-animation-iteration-count: infinite;
-}
-
-body {
-	overflow: hidden;
-	padding: 0;
-}
-
-canvas {
 }

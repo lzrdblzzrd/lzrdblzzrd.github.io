@@ -297,6 +297,10 @@ $('.saveToFile').on('click', function () {
     });
 });
 
-$(function () {
-  $('[data-toggle="popover"]').popover()
-})
+var angle = sessionStorage['angle'] || 'defaultValue';
+
+(function RainbowColor() {
+	$(".rainbow").css({"background-color":"hsla(" + (180 + angle) + ", 100%, 50%, 50%)", "color":"hsl(" + angle + ", 100%, 50%)", "border-color":"hsl(" + (180 + angle) + ", 100%, 50%"});
+	(angle < 360 ? angle++ : angle = 0); sessionStorage['angle'] = angle;
+	requestAnimationFrame(RainbowColor);
+})();

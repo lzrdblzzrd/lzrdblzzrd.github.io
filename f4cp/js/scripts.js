@@ -297,7 +297,7 @@ $('.saveToFile').on('click', function () {
     });
 });
 
-var angle = sessionStorage['angle'] || 'defaultValue';
+var angle = sessionStorage['angle'] || '0';
 
 (function RainbowColor() {
 	$(".rainbow").css({"background-color":"hsla(" + (180 + angle) + ", 100%, 50%, 50%)", "color":"hsl(" + angle + ", 100%, 50%)", "border-color":"hsl(" + (180 + angle) + ", 100%, 50%"});

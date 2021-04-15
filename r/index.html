@@ -27,7 +27,7 @@
 			}
 		</style>
 		<script>
-			var angle = sessionStorage['angle'] || 'defaultValue';
+			var angle = sessionStorage['angle'] || '0';
 			var len = $(".span").text().length;
 			var rainbowSpans = $(".span").text().split('').map(function(char) {
 				return '<span class="rainbowSpan">' + char + '</span>';

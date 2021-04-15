@@ -3,29 +3,41 @@
   <head>
   	<title>Warface EU Stats</title>
 		<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAtElEQVQ4T7VT2w3DIAy0EWGTqgN4/xHYoOogFNEKBORwEoVEKl9g+w6/jkkdEVm8959qfhKREZEX2IqrxTHiqzFoUvVm/KQTTIIbV8eVy0XwQNLSOUt7tyoRcS2Vb4sIIZC1lowxAyilVN7KzhuCg0C6RYDZ3CJAUL7HGMk5h6XxpokYiAR7vflPE0+2ULv7FLKjj3KSpEwQNzELaJZkXWWlvplMBv0MakSZ1jIeVc7vIzn/AN8qd+vYqRYEAAAAAElFTkSuQmCC">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
 		<meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate"/>
 		<meta http-equiv="pragma" content="no-cache"/>
 		<meta http-equiv="expires" content="0"/>
+		<script src="https://code.jquery.com/git/jquery-git.js"></script>
 	</head>
 	<body bgcolor="black">
-		<div class="centered">
-			<div>
-				<a><img src="https://pc.warface.com/custom/ub/MV82NjQxMzI2c29tZV90b2tlbl9rZXk/6c6e0f284d4430dae327c4b1e65f98ae/bar.jpg"  onclick="window.open('https://wfts.su/profile/lzrdblzzrd')"/></a><br/>
-				<a><img src="https://pc.warface.com/custom/ub/MV83MDg1MTQ1c29tZV90b2tlbl9rZXk/6c6e0f284d4430dae327c4b1e65f98ae/bar.jpg" onclick="window.open('https://wfts.su/profile/mdnln')"/></a><br/>
+		<div class="centered rainbow">
+			<div class="players">
+				<img src="https://pc.warface.com/custom/ub/MV82NjQxMzI2c29tZV90b2tlbl9rZXk/6c6e0f284d4430dae327c4b1e65f98ae/bar.jpg" style="width:100%; height:100%"  onclick="window.open('https://wfts.su/profile/lzrdblzzrd')"/><br/>
+				<img src="https://pc.warface.com/custom/ub/MV83MDg1MTQ1c29tZV90b2tlbl9rZXk/6c6e0f284d4430dae327c4b1e65f98ae/bar.jpg" style="width:100%; height:100%" onclick="window.open('https://wfts.su/profile/mdnln')"/><br/>
 			</div>
-			<div>
-				<p><img src="https://pc.warface.com/custom/ub/MV82NjQxMzI2c29tZV90b2tlbl9rZXk/6c6e0f284d4430dae327c4b1e65f98ae/bar.jpg?ref3" onclick="window.open('https://wfts.su/clans/europe/13707_193.cc/members')"/></p>
+			<hr style="height:1px; border:none; margin:0" class="rainbowHr">
+			<div class="clans">
+				<img src="https://pc.warface.com/custom/ub/MV82NjQxMzI2c29tZV90b2tlbl9rZXk/6c6e0f284d4430dae327c4b1e65f98ae/bar.jpg?ref3" style="width:100%; height:100%" onclick="window.open('https://wfts.su/clans/europe/13707_193.cc/members')"/>
 			</div>
 		</div>
 		<style>
 			.centered {
-				margin: 0;
 				position: absolute;
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%);
 			}
 		</style>
+		<script>
+		var angle = sessionStorage['angle'] || '0';
+
+		(function RainbowColor() {
+			$(".rainbow").css({"background-color":"hsla(" + angle + ", 100%, 50%, 25%","border":"1px solid hsl(" + angle + ", 100%, 50%", "border-radius":"10px", "border-radius":"10px", "box-shadow":"0 0 20px hsl(" + angle + ", 100%, 50%"});
+			$(".rainbowHr").css({"color":"hsl(" + angle + ", 100%, 50%", "background-color":"hsl(" + angle + ", 100%, 50%"});
+			(angle < 360 ? angle++ : angle = 0); sessionStorage['angle'] = angle;
+			requestAnimationFrame(RainbowColor);
+		})();
+		</script>
 		<script>
 			function stop() {
 				return false

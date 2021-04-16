@@ -16,23 +16,25 @@ function onBodyLoad() {
 	});
 	myPlayer = jQuery('#bgndVideo').YTPlayer( {
 		onReady: function( player ) {
-                    $("#loadinggif").fadeTo(250, 0);
-					$("#enterbutton").fadeTo(250, 1);
-		setTimeout(function() {
-			$("#loadinggif").remove();
-		}, 500);
-		document.body.addEventListener('mouseenter', function(e) {
-			$("#enterbutton").fadeTo(100, 1);
-		});
-		document.body.addEventListener('mouseout', function(e) {
-			if (!e.relatedTarget && !e.toElement) {
-				$("#enterbutton").fadeTo(100, 0);
-			}
-		});
-		document.title = "​";
-		var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
-		link.rel = 'icon';
-		link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
+			setTimeout(function () {
+				$("#loadinggif").fadeTo(250, 0);
+				$("#enterbutton").fadeTo(250, 1);
+				setTimeout(function() {
+					$("#loadinggif").remove();
+				}, 500);
+				document.body.addEventListener('mouseenter', function(e) {
+					$("#enterbutton").fadeTo(100, 1);
+				});
+				document.body.addEventListener('mouseout', function(e) {
+					if (!e.relatedTarget && !e.toElement) {
+						$("#enterbutton").fadeTo(100, 0);
+					}
+				});
+				document.title = "​";
+				var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+				link.rel = 'icon';
+				link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
+			}, 500);
 		}
 	});    
 };
@@ -52,10 +54,6 @@ function enter(e) {
 	}, 1000);
 	$("#bgndVideo").YTPUnmute();
 	$("#bgndVideo").YTPPlay();
-	setTimeout(function() {
-		$("#bgndVideo").YTPUnmute();
-		$("#bgndVideo").YTPPlay();
-	}, 500);
 };
 
 function parallax() {

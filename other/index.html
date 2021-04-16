@@ -40,7 +40,7 @@
 				for (var i = 0; i < len; i++) {
 					$(span[i]).css({"color":"hsl(" + (angle + Math.floor(i * (180 / len))) + ", 100%, 50%)"});
 				};
-				(angle < 360 ? angle++ : angle = 0); sessionStorage['angle'] = angle;
+				(angle <= 360 ? angle++ : angle = 0); sessionStorage['angle'] = angle;
 				requestAnimationFrame(RainbowColor);
 			})();
 		</script>

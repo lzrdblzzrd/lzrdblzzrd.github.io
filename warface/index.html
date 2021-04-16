@@ -56,7 +56,7 @@
 			(function RainbowColor() {
 				$(".rainbow").css({"background-color":"hsla(" + angle + ", 100%, 50%, 25%","border":"1px solid hsl(" + angle + ", 100%, 50%", "border-radius":"10px", "border-radius":"10px", "box-shadow":"0 0 20px hsl(" + angle + ", 100%, 50%"});
 				$(".rainbowBottom").css({"border-bottom":"1px solid hsl(" + angle + ", 100%, 50%"});
-				(angle < 360 ? angle++ : angle = 0); sessionStorage['angle'] = angle;
+				(angle <= 360 ? angle++ : angle = 0); sessionStorage['angle'] = angle;
 				requestAnimationFrame(RainbowColor);
 			})();
 		</script>

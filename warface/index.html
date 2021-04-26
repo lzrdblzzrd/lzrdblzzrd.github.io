@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html style="background-color: black">
   <head>
-  	<title>Warface EU Stats</title>
+  	<title>Warface</title>
 		<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAtElEQVQ4T7VT2w3DIAy0EWGTqgN4/xHYoOogFNEKBORwEoVEKl9g+w6/jkkdEVm8959qfhKREZEX2IqrxTHiqzFoUvVm/KQTTIIbV8eVy0XwQNLSOUt7tyoRcS2Vb4sIIZC1lowxAyilVN7KzhuCg0C6RYDZ3CJAUL7HGMk5h6XxpokYiAR7vflPE0+2ULv7FLKjj3KSpEwQNzELaJZkXWWlvplMBv0MakSZ1jIeVc7vIzn/AN8qd+vYqRYEAAAAAElFTkSuQmCC">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
 		<meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate"/>
@@ -15,7 +15,7 @@
 	</div>
 	<body style="display:none" onload="$('body').fadeIn('slow')">
 		<div class="centered rainbow">
-			<div class="players rainbowBottom">
+			<div class="players">
 				<img class="player" src="https://ru.warface.com/custom/ub/086a5c20d0e52413ce885676115b91d3/548813c1bdfae04d9aee1894a95f871e/bar.jpg" style="width:100%; height:100%" onclick="window.open('https://wfts.su/profile/лзрдблззрд')"/><br/>
 				<img class="player" src="https://ru.warface.com/custom/ub/8fd2ab7f9054d0e01f9126f5e857d608/22f945be9f6b44e2dda5586f52789f03/bar.jpg" style="width:100%; height:100%" onclick="window.open('https://wfts.su/profile/мднлн')"/><br/>
 				<img class="player" src="https://ru.warface.com/custom/ub/5f7c54e8abf5d03cf5e877d9f423cd19/abd9cae5eb9cb86bb59633d1044992a0/bar.jpg" style="width:100%; height:100%" onclick="window.open('https://wfts.su/profile/С0чный_капитан')"/><br/>
@@ -57,7 +57,7 @@
 
 			(function RainbowColor() {
 				$(".rainbow").css({"background-color":"hsla(" + angle + ", 100%, 50%, 25%","border":"1px solid hsl(" + angle + ", 100%, 50%", "border-radius":"10px", "border-radius":"10px", "box-shadow":"0 0 20px hsl(" + angle + ", 100%, 50%"});
-				$(".rainbowBottom").css({"border-bottom":"1px solid hsl(" + angle + ", 100%, 50%"});
+				$(".rainbowHr").css({"border-bottom":"1px solid hsl(" + angle + ", 100%, 50%"});
 				(angle <= 360 ? angle++ : angle = 0); sessionStorage['angle'] = angle;
 				requestAnimationFrame(RainbowColor);
 			})();

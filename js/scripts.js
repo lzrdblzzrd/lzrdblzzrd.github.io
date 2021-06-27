@@ -1,4 +1,4 @@
-var videos = ["MZQz4mf2Q8g", "EfPlon91dwU", "T-OwX_s1Fbk", "-kaJ2DaEn88"];
+var videos = ["MZQz4mf2Q8g", "EfPlon91dwU", "T-OwX_s1Fbk"];
 var random = videos[Math.floor(Math.random() * videos.length)];
 
 function onBodyLoad() {

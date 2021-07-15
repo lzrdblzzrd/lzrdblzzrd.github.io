@@ -1,0 +1,39 @@
+{
+    "+tweakers": [
+        "baritone.launch.BaritoneTweaker"
+    ],
+    "formatVersion": 1,
+    "libraries": [
+        {
+            "name": "net.minecraft:launchwrapper:1.12"
+        },
+        {
+            "name": "cabaletta:baritone-api:1.6",
+            "url": "https://impactdevelopment.github.io/maven/"
+        },
+        {
+            "name": "com.github.ImpactDevelopment:SimpleTweaker:1.2",
+            "url": "https://impactdevelopment.github.io/maven/"
+        },
+        {
+            "name": "org.spongepowered:mixin:0.8.1",
+            "url": "https://files.minecraftforge.net/maven/"
+        },
+        {
+            "name": "org.ow2.asm:asm-all:5.2",
+            "url": "https://repo1.maven.org/maven2/"
+        }
+    ],
+    "mainClass": "net.minecraft.launchwrapper.Launch",
+    "name": "Baritone",
+    "releaseTime": "2019-07-23T20:50:21+00:00",
+    "requires": [
+        {
+            "equals": "1.16.5",
+            "uid": "net.minecraft"
+        }
+    ],
+    "type": "release",
+    "uid": "baritone",
+    "version": "1.16.5"
+}
